@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DaheimSmart – Smarte Technik. Einfach erklärt.</title>
+<meta name="description" content="DaheimSmart erklärt Smart-Home-Technik einfach, vergleicht Produkte und hilft dir, bessere Entscheidungen für dein Zuhause zu treffen.">
+<style>
+:root{--bg:#f6f8f7;--card:#fff;--text:#17221f;--muted:#61706b;--accent:#1f7a5a;--line:#dfe7e3}
+*{box-sizing:border-box} body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);line-height:1.55}
+header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
+nav{max-width:1100px;margin:auto;padding:16px 20px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{font-size:24px;font-weight:800;letter-spacing:-.5px}.logo span{color:var(--accent)}
+nav a{color:var(--text);text-decoration:none;margin-left:18px;font-size:14px}
+.hero{max-width:1100px;margin:auto;padding:70px 20px 45px;display:grid;grid-template-columns:1.2fr .8fr;gap:35px;align-items:center}
+.badge{display:inline-block;background:#e7f3ed;color:var(--accent);padding:7px 12px;border-radius:999px;font-size:13px;font-weight:700}
+h1{font-size:clamp(38px,6vw,64px);line-height:1.02;margin:18px 0}
+h2{font-size:32px;margin:0 0 12px} h3{margin:8px 0}
+.lead{font-size:19px;color:var(--muted);max-width:650px}
+.btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;padding:13px 18px;border-radius:10px;font-weight:700;margin-top:12px}
+.hero-card{background:#17352b;color:#fff;border-radius:24px;padding:28px;min-height:280px;display:flex;flex-direction:column;justify-content:space-between}
+.hero-card .bolt{font-size:60px}
+section{max-width:1100px;margin:auto;padding:45px 20px}
+.section-head{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:22px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px}
+.icon{font-size:30px}.muted{color:var(--muted)}
+.compare{overflow:auto;background:#fff;border:1px solid var(--line);border-radius:16px}
+table{width:100%;border-collapse:collapse;min-width:650px}th,td{text-align:left;padding:15px;border-bottom:1px solid var(--line)}th{background:#f0f5f2}
+.rank{font-weight:800}.winner{color:var(--accent)}
+.faq{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+footer{background:#17221f;color:#dfe7e3;padding:35px 20px;margin-top:30px}
+footer div{max-width:1100px;margin:auto}
+@media(max-width:800px){.hero{grid-template-columns:1fr;padding-top:45px}.grid{grid-template-columns:1fr 1fr}.faq{grid-template-columns:1fr}nav{align-items:flex-start}nav div:last-child{display:none}}
+@media(max-width:520px){.grid{grid-template-columns:1fr}h1{font-size:42px}}
+</style>
+</head>
+<body>
+<header>
+<nav>
+  <div class="logo">Daheim<span>Smart</span></div>
+  <div>
+    <a href="#smart-home">Smart Home</a>
+    <a href="#energie">Energie</a>
+    <a href="#vergleich">Vergleiche</a>
+    <a href="#ratgeber">Ratgeber</a>
+  </div>
+</nav>
+</header>
+
+<main>
+<section class="hero">
+  <div>
+    <span class="badge">🏠 Unser neues Smart-Home-Projekt</span>
+    <h1>Mach dein Zuhause smarter.</h1>
+    <p class="lead">Praktische Technik einfach erklärt, Produkte ehrlich verglichen und Lösungen für ein smarteres und effizienteres Zuhause.</p>
+    <a class="btn" href="#vergleich">Vergleich ansehen →</a>
+  </div>
+  <div class="hero-card">
+    <div class="bolt">⚡</div>
+    <div>
+      <h2>Stromverbrauch messen</h2>
+      <p>Welche smarte Steckdose lohnt sich wirklich?</p>
+    </div>
+  </div>
+</section>
+
+<section id="smart-home">
+<div class="section-head"><div><h2>Was interessiert dich?</h2><p class="muted">Wir machen Technik verständlich.</p></div></div>
+<div class="grid">
+  <div class="card"><div class="icon">🏠</div><h3>Smart Home</h3><p class="muted">Automatisierung, Sensoren und praktische Geräte.</p></div>
+  <div class="card"><div class="icon">⚡</div><h3>Energie</h3><p class="muted">Verbrauch messen, verstehen und bewusster nutzen.</p></div>
+  <div class="card"><div class="icon">📶</div><h3>WLAN & Technik</h3><p class="muted">Nützliche Technik für ein besser vernetztes Zuhause.</p></div>
+  <div class="card"><div class="icon">🏆</div><h3>Vergleiche</h3><p class="muted">Vor- und Nachteile statt blindem Kauf.</p></div>
+</div>
+</section>
+
+<section id="vergleich">
+<div class="section-head"><div><h2>Die ersten Smart-Plug-Kandidaten</h2><p class="muted">Unsere vorläufige Orientierung – Preise und Funktionen vor Veröffentlichung erneut prüfen.</p></div></div>
+<div class="compare">
+<table>
+<thead><tr><th>Modell</th><th>Geeignet für</th><th>Strommessung</th><th>Matter</th></tr></thead>
+<tbody>
+<tr><td class="rank winner">🥇 Tapo P110M</td><td>Einsteiger</td><td>✅</td><td>✅</td></tr>
+<tr><td class="rank">🥈 Shelly Plug S Gen3</td><td>Fortgeschrittene</td><td>✅</td><td>✅</td></tr>
+<tr><td class="rank">🥉 SONOFF S60</td><td>Zigbee-Nutzer</td><td>✅</td><td>versionsabhängig</td></tr>
+<tr><td class="rank">📡 FRITZ! Smart Energy 200</td><td>FRITZ!-Nutzer</td><td>✅</td><td>—</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section id="energie">
+<div class="section-head"><div><h2>⚡ Messen statt raten.</h2><p class="lead">Eine smarte Steckdose spart nicht automatisch Strom. Sie kann dir aber zeigen, wo Verbrauch entsteht und dir helfen, Geräte gezielter zu steuern.</p></div></div>
+<div class="grid">
+  <div class="card"><h3>1. Messen</h3><p class="muted">Finde heraus, wie viel ein Gerät tatsächlich verbraucht.</p></div>
+  <div class="card"><h3>2. Verstehen</h3><p class="muted">Setze den Verbrauch in Relation zu deiner Nutzung und deinem Strompreis.</p></div>
+  <div class="card"><h3>3. Handeln</h3><p class="muted">Nutze Zeitpläne oder Abschaltungen, wenn sie sinnvoll sind.</p></div>
+  <div class="card"><h3>4. Sparen</h3><p class="muted">Wie viel du sparst, hängt von Gerät, Tarif und Verhalten ab.</p></div>
+</div>
+</section>
+
+<section id="ratgeber">
+<div class="section-head"><div><h2>Unser erster Ratgeber</h2><p class="muted">Die drei Fragen, die wir selbst vor dem Kauf stellen würden.</p></div></div>
+<div class="faq">
+  <div class="card"><h3>⚡ Wie viel verbraucht eine smarte Steckdose?</h3><p class="muted">Sie benötigt selbst etwas Energie. Der Eigenverbrauch ist aber nur ein Teil der Betrachtung – entscheidend ist, was du mit ihr messen und steuern kannst.</p></div>
+  <div class="card"><h3>🛡️ Ist sie sicher?</h3><p class="muted">Das hängt vom Modell und der Nutzung ab. Herstellerangaben, maximale Belastung und Hinweise für bestimmte Gerätetypen müssen beachtet werden.</p></div>
+  <div class="card"><h3>💶 Wie viel kann ich sparen?</h3><p class="muted">Es gibt keine pauschale Zahl. Erst messen, dann unnötigen Verbrauch erkennen und gezielt verändern.</p></div>
+  <div class="card"><h3>🎯 Für wen ist sie sinnvoll?</h3><p class="muted">Für Menschen, die Verbrauch sichtbar machen, Geräte kontrollieren oder ihr Smart Home Schritt für Schritt erweitern möchten.</p></div>
+</div>
+</section>
+</main>
+
+<footer>
+<div>
+<strong>DaheimSmart</strong><br>
+Smarte Technik. Einfach erklärt.<br><br>
+<small>Prototyp – noch nicht veröffentlicht. Vor dem öffentlichen Start: Marken-, Domain-, Impressum-, Datenschutz- und Affiliate-Prüfung durchführen.</small>
+</div>
+</footer>
+</body>
+</html>
