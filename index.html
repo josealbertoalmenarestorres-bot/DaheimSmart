@@ -60,7 +60,30 @@ outline-offset:3px;
 <section class="section" id="ratgeber"><div class="eyebrow" style="text-align:center">Einfach erklärt</div><h2>Smart Home ohne Technik-Frust</h2><p class="lead">Wir konzentrieren uns auf Lösungen mit nachvollziehbarem Nutzen.</p><div class="cards"><article class="info-card"><h3>🔎 Messen</h3><p>Verbrauch und Nutzung zuerst verstehen, statt blind neue Technik zu kaufen.</p></article><article class="info-card"><h3>⚖️ Vergleichen</h3><p>Preis, Funktionen, Datenschutz, Installation und laufende Kosten gemeinsam betrachten.</p></article><article class="info-card"><h3>✅ Entscheiden</h3><p>Nur kaufen, wenn der praktische Nutzen für dein Zuhause erkennbar ist.</p></article></div></section>
 </main><footer><strong>DaheimSmart</strong><br>Smarte Technik. Einfach erklärt.<br><br>Messen statt raten.</footer>
 <script>
-function calculate(){const p=parseFloat(power.value)||0,h=parseFloat(hours.value)||0,d=parseFloat(days.value)||0,pr=parseFloat(price.value)||0,k=p/1000*h*d,m=k*pr,y=m*12,f=new Intl.NumberFormat('de-DE',{minimumFractionDigits:2,maximumFractionDigits:2});kwh.textContent=f.format(k)+' kWh';monthly.textContent=f.format(m)+' €';yearly.textContent=f.format(y)+' €'}
+const powerInput=document.getElementById('power');
+const hoursInput=document.getElementById('hours');
+const daysInput=document.getElementById('days');
+const priceInput=document.getElementById('price');
+const kwhOutput=document.getElementById('kwh');
+const monthlyOutput=document.getElementById('monthly');
+const yearlyOutput=document.getElementById('yearly');
+
+function calculate(){
+const p=parseFloat(powerInput.value)||0;
+const h=parseFloat(hoursInput.value)||0;
+const d=parseFloat(daysInput.value)||0;
+const pr=parseFloat(priceInput.value)||0;
+const k=p/1000*h*d;
+const m=k*pr;
+const y=m*12;
+const f=new Intl.NumberFormat('de-DE',{minimumFractionDigits:2,maximumFractionDigits:2});
+kwhOutput.textContent=f.format(k)+' kWh';
+monthlyOutput.textContent=f.format(m)+' €';
+yearlyOutput.textContent=f.format(y)+' €';
+}
+
+document.querySelectorAll('input').forEach(i=>i.addEventListener('input',calculate));
+calculate(); 
 document.querySelectorAll('input').forEach(i=>i.addEventListener('input',calculate));calculate();
 </script>
 </body></html>
