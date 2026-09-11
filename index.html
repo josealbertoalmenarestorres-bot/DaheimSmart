@@ -5,6 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="DaheimSmart – smarte Technik für dein Zuhause. Einfach erklärt, ehrlich verglichen und mit praktischen Tipps.">
 <title>DaheimSmart – Smarte Technik. Einfach erklärt.</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}body{font-family:Arial,sans-serif;background:#f5f7f5;color:#17201a;line-height:1.6}
+header{background:#102019;color:white;padding:18px 6%;display:flex;justify-content:space-between;align-items:center}.logo{font-size:1.35rem;font-weight:700}nav a{color:white;text-decoration:none;margin-left:20px;font-size:.95rem}
+.hero{background:#102019;color:white;padding:55px 6% 65px;display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}.hero h1{font-size:clamp(2.2rem,5vw,4rem);line-height:1.08;margin:15px 0}.hero p{font-size:1.08rem;max-width:600px;color:#dce7df}.eyebrow{color:#8fd19e;text-transform:uppercase;font-size:.78rem;font-weight:700;letter-spacing:1.5px}.hero img{width:100%;border-radius:22px;display:block}
+.btn{display:inline-block;margin-top:20px;background:#8fd19e;color:#102019;padding:11px 17px;border-radius:10px;text-decoration:none;font-weight:700}.trust{padding:18px 6%;background:white;text-align:center;font-weight:700}
+.section{padding:60px 6%;max-width:1200px;margin:auto}.section h2{text-align:center;font-size:2rem;margin:8px 0 12px}.lead{text-align:center;max-width:760px;margin:0 auto 35px;color:#5a665e}
+.solution-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.solution-card{background:white;border:1px solid #e1e8e2;border-radius:16px;padding:22px;box-shadow:0 5px 18px #1020190b}.solution-card h3{margin:8px 0}.solution-card p{color:#5a665e;font-size:.94rem}.solution-icon{font-size:2rem}.metric{font-size:1.2rem;font-weight:700;margin:15px 0;color:#244d32}.visual-row{font-weight:700;margin:14px 0}.proof-strip{margin-top:25px;background:#e9f4eb;border-radius:14px;padding:18px;text-align:center;font-weight:700}
+.calculator{background:#102019;color:white;border-radius:22px;padding:30px;max-width:850px;margin:35px auto 0}.calculator h3{font-size:1.7rem;margin-bottom:8px}.calc-intro{color:#dce7df;margin-bottom:22px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}label{display:block;font-size:.9rem;font-weight:700;margin-bottom:6px}input{width:100%;padding:12px;border:0;border-radius:9px;font-size:1rem}
+.result{margin-top:22px;background:#fff;color:#17201a;border-radius:14px;padding:20px}.result-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;text-align:center}.result strong{display:block;font-size:1.45rem;color:#244d32}.formula{margin-top:18px;font-size:.85rem;color:#68756c}.notice{margin-top:15px;font-size:.85rem;color:#dce7df}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.info-card{background:white;padding:24px;border-radius:16px;border:1px solid #e1e8e2}footer{background:#102019;color:#dce7df;text-align:center;padding:35px 6%;margin-top:20px}
+@media(max-width:800px){header{padding:15px 5%}nav a{margin-left:10px;font-size:.85rem}.hero{grid-template-columns:1fr;padding:40px 5% 50px}.section{padding:45px 5%}.solution-grid,.cards{grid-template-columns:1fr}.form-grid,.result-grid{grid-template-columns:1fr}}
 .skip-link{
 position:absolute;
 left:-9999px;
@@ -25,17 +36,7 @@ left:10px;
 a:focus-visible{
 outline:3px solid var(--green);
 outline-offset:3px;
-}<style>
-*{box-sizing:border-box;margin:0;padding:0}body{font-family:Arial,sans-serif;background:#f5f7f5;color:#17201a;line-height:1.6}
-header{background:#102019;color:white;padding:18px 6%;display:flex;justify-content:space-between;align-items:center}.logo{font-size:1.35rem;font-weight:700}nav a{color:white;text-decoration:none;margin-left:20px;font-size:.95rem}
-.hero{background:#102019;color:white;padding:55px 6% 65px;display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}.hero h1{font-size:clamp(2.2rem,5vw,4rem);line-height:1.08;margin:15px 0}.hero p{font-size:1.08rem;max-width:600px;color:#dce7df}.eyebrow{color:#8fd19e;text-transform:uppercase;font-size:.78rem;font-weight:700;letter-spacing:1.5px}.hero img{width:100%;border-radius:22px;display:block}
-.btn{display:inline-block;margin-top:20px;background:#8fd19e;color:#102019;padding:11px 17px;border-radius:10px;text-decoration:none;font-weight:700}.trust{padding:18px 6%;background:white;text-align:center;font-weight:700}
-.section{padding:60px 6%;max-width:1200px;margin:auto}.section h2{text-align:center;font-size:2rem;margin:8px 0 12px}.lead{text-align:center;max-width:760px;margin:0 auto 35px;color:#5a665e}
-.solution-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.solution-card{background:white;border:1px solid #e1e8e2;border-radius:16px;padding:22px;box-shadow:0 5px 18px #1020190b}.solution-card h3{margin:8px 0}.solution-card p{color:#5a665e;font-size:.94rem}.solution-icon{font-size:2rem}.metric{font-size:1.2rem;font-weight:700;margin:15px 0;color:#244d32}.visual-row{font-weight:700;margin:14px 0}.proof-strip{margin-top:25px;background:#e9f4eb;border-radius:14px;padding:18px;text-align:center;font-weight:700}
-.calculator{background:#102019;color:white;border-radius:22px;padding:30px;max-width:850px;margin:35px auto 0}.calculator h3{font-size:1.7rem;margin-bottom:8px}.calc-intro{color:#dce7df;margin-bottom:22px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}label{display:block;font-size:.9rem;font-weight:700;margin-bottom:6px}input{width:100%;padding:12px;border:0;border-radius:9px;font-size:1rem}
-.result{margin-top:22px;background:#fff;color:#17201a;border-radius:14px;padding:20px}.result-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;text-align:center}.result strong{display:block;font-size:1.45rem;color:#244d32}.formula{margin-top:18px;font-size:.85rem;color:#68756c}.notice{margin-top:15px;font-size:.85rem;color:#dce7df}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.info-card{background:white;padding:24px;border-radius:16px;border:1px solid #e1e8e2}footer{background:#102019;color:#dce7df;text-align:center;padding:35px 6%;margin-top:20px}
-@media(max-width:800px){header{padding:15px 5%}nav a{margin-left:10px;font-size:.85rem}.hero{grid-template-columns:1fr;padding:40px 5% 50px}.section{padding:45px 5%}.solution-grid,.cards{grid-template-columns:1fr}.form-grid,.result-grid{grid-template-columns:1fr}}
+}
 </style>
 </head>
 <body>
