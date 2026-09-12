@@ -2,7 +2,7 @@
 
 **Smarte Technik. Einfach erklärt.**
 
-DaheimSmart zeigt, was Smart-Home-Technik im Alltag wirklich bringt – verständlich, praktisch y sin Technik-Hype.
+DaheimSmart zeigt, was Smart-Home-Technik im Alltag wirklich bringt – verständlich, praktisch und ohne Technik-Hype.
 
 ## Unser Prinzip
 
