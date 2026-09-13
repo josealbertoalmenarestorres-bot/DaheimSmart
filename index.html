@@ -30,7 +30,12 @@ header{background:#102019;color:white;padding:18px 6%;display:flex;justify-conte
 .section{padding:60px 6%;max-width:1200px;margin:auto}.section h2{text-align:center;font-size:2rem;margin:8px 0 12px}.lead{text-align:center;max-width:760px;margin:0 auto 35px;color:#5a665e}
 .solution-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.solution-card{background:white;border:1px solid #e1e8e2;border-radius:16px;padding:22px;box-shadow:0 5px 18px #1020190b}.solution-card h3{margin:8px 0}.solution-card p{color:#5a665e;font-size:.94rem}.solution-icon{font-size:2rem}.metric{font-size:1.2rem;font-weight:700;margin:15px 0;color:#244d32}.visual-row{font-weight:700;margin:14px 0}.proof-strip{margin-top:25px;background:#e9f4eb;border-radius:14px;padding:18px;text-align:center;font-weight:700}
 .calculator{background:#102019;color:white;border-radius:22px;padding:30px;max-width:850px;margin:35px auto 0}.calculator h3{font-size:1.7rem;margin-bottom:8px}.calc-intro{color:#dce7df;margin-bottom:22px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}label{display:block;font-size:.9rem;font-weight:700;margin-bottom:6px}input{width:100%;padding:12px;border:0;border-radius:9px;font-size:1rem}
-.result{margin-top:22px;background:#fff;color:#17201a;border-radius:14px;padding:20px}.result-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;text-align:center}.result strong{display:block;font-size:1.45rem;color:#244d32}.formula{margin-top:18px;font-size:.85rem;color:#68756c}.notice{margin-top:15px;font-size:.85rem;color:#dce7df}
+.result{margin-top:22px;background:#fff;color:#17201a;border-radius:14px;padding:20px}.result-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:12px;
+  text-align:center;
+}.result strong{display:block;font-size:1.45rem;color:#244d32}.formula{margin-top:18px;font-size:.85rem;color:#68756c}.notice{margin-top:15px;font-size:.85rem;color:#dce7df}
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.info-card{background:white;padding:24px;border-radius:16px;border:1px solid #e1e8e2}footer{background:#102019;color:#dce7df;text-align:center;padding:35px 6%;margin-top:20px}
 @media(max-width:800px){header{padding:15px 5%}nav a{margin-left:10px;font-size:.85rem}.hero{grid-template-columns:1fr;padding:40px 5% 50px}.section{padding:45px 5%}.solution-grid,.cards{grid-template-columns:1fr}.form-grid,.result-grid{grid-template-columns:1fr}}
 .skip-link{
@@ -147,7 +152,10 @@ outline-offset:3px;
 <section class="section" id="rechner"><div class="eyebrow" style="text-align:center">DaheimSmart Rechner</div><h2>Was kostet dein Gerät wirklich?</h2><p class="lead">Gib die Werte deines Geräts ein und berechne Stromverbrauch und Kosten. Das Ergebnis basiert auf deinen Angaben.</p>
 <div class="calculator"><h3>⚡ Stromkosten berechnen</h3><p class="calc-intro">Alle Werte sind veränderbar. Kein Login und keine Speicherung.</p>
 <div class="form-grid"><div><label for="power">Leistung des Geräts (Watt)</label><input id="power" type="number" min="0" step="1" value="100"></div><div><label for="hours">Stunden pro Tag</label><input id="hours" type="number" min="0" step="0.1" value="4"></div><div><label for="days">Tage pro Monat</label><input id="days" type="number" min="0" step="1" value="30"></div><div><label for="price">Strompreis (€/kWh)</label><input id="price" type="number" min="0" step="0.01" value="0.35"></div></div>
-<div class="result"><div class="result-grid"><div>Verbrauch / Monat<strong id="kwh">12,00 kWh</strong></div><div>Kosten / Monat<strong id="monthly">4,20 €</strong></div><div>Kosten / Jahr<strong id="yearly">50,40 €</strong></div></div><div class="formula">Formel: Watt ÷ 1000 × Stunden pro Tag × Tage pro Monat = kWh/Monat.</div></div>
+<div class="result"><div class="result-grid"><div>Verbrauch / Monat<strong id="kwh">12,00 kWh</strong></div>
+<div>Kosten / Monat<strong id="monthly">4,20 €</strong></div>
+<div>Kosten / Jahr<strong id="yearly">50,40 €</strong></div>
+<div>Kosten / 5 Jahre<strong id="fiveyear">252,00 €</strong></div><div>Kosten / Jahr<strong id="yearly">50,40 €</strong></div></div><div class="formula">Formel: Watt ÷ 1000 × Stunden pro Tag × Tage pro Monat = kWh/Monat.</div></div>
 <p class="notice">Hinweis: Rechnerische Näherung. Der tatsächliche Verbrauch kann je nach Gerät und Nutzung abweichen.</p></div></section>
 <section class="section" id="ratgeber"><div class="eyebrow" style="text-align:center">Einfach erklärt</div><h2>Smart Home ohne Technik-Frust</h2><p class="lead">Wir konzentrieren uns auf Lösungen mit nachvollziehbarem Nutzen.</p><div class="cards"><article class="info-card"><h3>🔎 Messen</h3><p>Verbrauch und Nutzung zuerst verstehen, statt blind neue Technik zu kaufen.</p></article><article class="info-card"><h3>⚖️ Vergleichen</h3><p>Preis, Funktionen, Datenschutz, Installation und laufende Kosten gemeinsam betrachten.</p></article><article class="info-card"><h3>✅ Entscheiden</h3><p>Nur kaufen, wenn der praktische Nutzen für dein Zuhause erkennbar ist.</p></article></div></section>
 </main><footer><strong>DaheimSmart</strong><br>Smarte Technik. Einfach erklärt.<br><br>Messen statt raten.</footer>
@@ -159,7 +167,7 @@ const priceInput=document.getElementById('price');
 const kwhOutput=document.getElementById('kwh');
 const monthlyOutput=document.getElementById('monthly');
 const yearlyOutput=document.getElementById('yearly');
-
+const fiveYearOutput=document.getElementById('fiveyear');
 function calculate(){
 const p=parseFloat(powerInput.value)||0;
 const h=parseFloat(hoursInput.value)||0;
@@ -168,10 +176,12 @@ const pr=parseFloat(priceInput.value)||0;
 const k=p/1000*h*d;
 const m=k*pr;
 const y=m*12;
+const fiveYear=m*60;
 const f=new Intl.NumberFormat('de-DE',{minimumFractionDigits:2,maximumFractionDigits:2});
 kwhOutput.textContent=f.format(k)+' kWh';
 monthlyOutput.textContent=f.format(m)+' €';
 yearlyOutput.textContent=f.format(y)+' €';
+fiveYearOutput.textContent=f.format(fiveYear)+' €';
 }
 
 
