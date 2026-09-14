@@ -398,16 +398,25 @@ function calculateComparison(){
 }
 
 [
-  deviceAInput,
-  deviceBInput,
-  powerAInput,
-  powerBInput,
-  hoursAInput,
-  hoursBInput,
-  compareDaysInput,
-  comparePriceInput
-].forEach(i=>i.addEventListener('input',calculateComparison));
+  window.addEventListener('DOMContentLoaded',function(){
 
-calculateComparison();
+  [
+    deviceAInput,
+    deviceBInput,
+    powerAInput,
+    powerBInput,
+    hoursAInput,
+    hoursBInput,
+    compareDaysInput,
+    comparePriceInput
+  ].forEach(function(i){
+    if(i){
+      i.addEventListener('input',calculateComparison);
+    }
+  });
+
+  calculateComparison();
+
+});
 </script>
 </body></html>
