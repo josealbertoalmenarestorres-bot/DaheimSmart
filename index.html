@@ -156,7 +156,88 @@ outline-offset:3px;
 <div>Kosten / Monat<strong id="monthly">4,20 €</strong></div>
 <div>Kosten / Jahr<strong id="yearly">50,40 €</strong></div>
 <div>Kosten / 5 Jahre<strong id="fiveyear">252,00 €</strong></div></div><div class="formula">Formel: Watt ÷ 1000 × Stunden pro Tag × Tage pro Monat = kWh/Monat.</div></div>
-<p class="notice">Hinweis: Rechnerische Näherung. Der tatsächliche Verbrauch kann je nach Gerät und Nutzung abweichen.</p></div></section>
+<p class="notice">Hinweis: Rechnerische Näherung. Der tatsächliche Verbrauch kann je nach Gerät und Nutzung abweichen.</p></div>
+
+<div class="calculator">
+<h3>⚖️ Zwei Geräte vergleichen</h3>
+<p class="calc-intro">Vergleiche zwei Geräte und sieh, welches bei deinem Strompreis langfristig günstiger ist.</p>
+
+<div class="compare-grid">
+
+<div>
+<h4>Gerät A</h4>
+<label for="deviceA">Name des Geräts</label>
+<input id="deviceA" type="text" value="Gerät A">
+
+<label for="powerA">Leistung (Watt)</label>
+<input id="powerA" type="number" min="0" step="1" value="100">
+
+<label for="hoursA">Stunden pro Tag</label>
+<input id="hoursA" type="number" min="0" step="0.1" value="4">
+</div>
+
+<div>
+<h4>Gerät B</h4>
+<label for="deviceB">Name des Geräts</label>
+<input id="deviceB" type="text" value="Gerät B">
+
+<label for="powerB">Leistung (Watt)</label>
+<input id="powerB" type="number" min="0" step="1" value="60">
+
+<label for="hoursB">Stunden pro Tag</label>
+<input id="hoursB" type="number" min="0" step="0.1" value="4">
+</div>
+
+</div>
+
+<div class="form-grid" style="margin-top:15px">
+<div>
+<label for="compareDays">Tage pro Monat</label>
+<input id="compareDays" type="number" min="0" step="1" value="30">
+</div>
+
+<div>
+<label for="comparePrice">Strompreis (€/kWh)</label>
+<input id="comparePrice" type="number" min="0" step="0.01" value="0.35">
+</div>
+</div>
+
+<div class="result">
+
+<div class="compare-table">
+<div class="compare-heading">Vergleich</div>
+<div class="compare-heading" id="labelA">Gerät A</div>
+<div class="compare-heading" id="labelB">Gerät B</div>
+
+<div>Verbrauch / Monat</div>
+<div id="compareKwhA">12,00 kWh</div>
+<div id="compareKwhB">7,20 kWh</div>
+
+<div>Kosten / Monat</div>
+<div id="compareMonthlyA">4,20 €</div>
+<div id="compareMonthlyB">2,52 €</div>
+
+<div>Kosten / Jahr</div>
+<div id="compareYearlyA">50,40 €</div>
+<div id="compareYearlyB">30,24 €</div>
+</div>
+
+<div class="compare-highlight">
+Unterschied / Jahr
+<strong id="compareDiffYear">20,16 €</strong>
+
+Unterschied / 5 Jahre
+<strong id="compareDiffFive">100,80 €</strong>
+
+<div id="compareMessage">Gerät B ist bei diesen Annahmen günstiger.</div>
+</div>
+
+</div>
+
+<p class="notice">Hinweis: Der Vergleich basiert auf deinen Angaben. Tatsächliche Kosten können je nach Nutzung und Verbrauch abweichen.</p>
+</div>
+
+</section> 
 <section class="section" id="ratgeber"><div class="eyebrow" style="text-align:center">Einfach erklärt</div><h2>Smart Home ohne Technik-Frust</h2><p class="lead">Wir konzentrieren uns auf Lösungen mit nachvollziehbarem Nutzen.</p><div class="cards"><article class="info-card"><h3>🔎 Messen</h3><p>Verbrauch und Nutzung zuerst verstehen, statt blind neue Technik zu kaufen.</p></article><article class="info-card"><h3>⚖️ Vergleichen</h3><p>Preis, Funktionen, Datenschutz, Installation und laufende Kosten gemeinsam betrachten.</p></article><article class="info-card"><h3>✅ Entscheiden</h3><p>Nur kaufen, wenn der praktische Nutzen für dein Zuhause erkennbar ist.</p></article></div></section>
 </main><footer><strong>DaheimSmart</strong><br>Smarte Technik. Einfach erklärt.<br><br>Messen statt raten.</footer>
 <script>
