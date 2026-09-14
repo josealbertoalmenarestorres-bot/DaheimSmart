@@ -37,7 +37,9 @@ header{background:#102019;color:white;padding:18px 6%;display:flex;justify-conte
   text-align:center;
 }.result strong{display:block;font-size:1.45rem;color:#244d32}.formula{margin-top:18px;font-size:.85rem;color:#68756c}.notice{margin-top:15px;font-size:.85rem;color:#dce7df}
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.info-card{background:white;padding:24px;border-radius:16px;border:1px solid #e1e8e2}footer{background:#102019;color:#dce7df;text-align:center;padding:35px 6%;margin-top:20px}
-@media(max-width:800px){header{padding:15px 5%}nav a{margin-left:10px;font-size:.85rem}.hero{grid-template-columns:1fr;padding:40px 5% 50px}.section{padding:45px 5%}.solution-grid,.cards{grid-template-columns:1fr}.form-grid,.result-grid{grid-template-columns:1fr}}
+@media(max-width:800px){header{padding:15px 5%}nav a{margin-left:10px;font-size:.85rem}.hero{grid-template-columns:1fr;padding:40px 5% 50px}.section{padding:45px 5%}.solution-grid,.cards{grid-template-columns:1fr}.form-grid,.result-grid{grid-template-columns:1fr}}.compare-grid{
+  grid-template-columns:1fr;
+}
 .skip-link{
 position:absolute;
 left:-9999px;
@@ -78,6 +80,58 @@ outline-offset:3px;
   margin-top:4px;
   color:#5a665e;
   font-size:.9rem;
+}
+.compare-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:15px;
+}
+
+.compare-heading{
+  margin-top:0;
+  color:#244d32;
+}
+
+.compare-table{
+  display:grid;
+  grid-template-columns:1.2fr 1fr 1fr;
+  gap:1px;
+  background:#dfe8e1;
+  border-radius:12px;
+  overflow:hidden;
+  margin-top:18px;
+}
+
+.compare-table>div{
+  background:white;
+  padding:12px;
+}
+
+.compare-highlight{
+  margin-top:15px;
+  background:#e9f4eb;
+  color:#17201a;
+  border-radius:12px;
+  padding:14px;
+}
+
+.compare-highlight span{
+  display:block;
+  color:#5a665e;
+  font-size:.9rem;
+}
+
+.compare-highlight strong{
+  display:block;
+  color:#244d32;
+  font-size:1.2rem;
+  margin-bottom:8px;
+}
+
+.compare-message{
+  margin-top:12px;
+  color:#5a665e;
+  font-weight:700;
 }
 </style>
 </head>
@@ -267,5 +321,93 @@ fiveYearOutput.textContent=f.format(fiveYear)+' €';
 
 
 document.querySelectorAll('input').forEach(i=>i.addEventListener('input',calculate));calculate();
+const deviceAInput=document.getElementById('deviceA');
+const deviceBInput=document.getElementById('deviceB');
+const powerAInput=document.getElementById('powerA');
+const powerBInput=document.getElementById('powerB');
+const hoursAInput=document.getElementById('hoursA');
+const hoursBInput=document.getElementById('hoursB');
+const compareDaysInput=document.getElementById('compareDays');
+const comparePriceInput=document.getElementById('comparePrice');
+
+const compareLabelA=document.getElementById('compareLabelA');
+const compareLabelB=document.getElementById('compareLabelB');
+const compareKwhA=document.getElementById('compareKwhA');
+const compareKwhB=document.getElementById('compareKwhB');
+const compareMonthlyA=document.getElementById('compareMonthlyA');
+const compareMonthlyB=document.getElementById('compareMonthlyB');
+const compareAnnualA=document.getElementById('compareAnnualA');
+const compareAnnualB=document.getElementById('compareAnnualB');
+const compareDiffYear=document.getElementById('compareDiffYear');
+const compareDiffFive=document.getElementById('compareDiffFive');
+const compareMessage=document.getElementById('compareMessage');
+
+function calculateComparison(){
+  const nameA=deviceAInput.value.trim()||'Gerät A';
+  const nameB=deviceBInput.value.trim()||'Gerät B';
+
+  const pA=parseFloat(powerAInput.value)||0;
+  const pB=parseFloat(powerBInput.value)||0;
+  const hA=parseFloat(hoursAInput.value)||0;
+  const hB=parseFloat(hoursBInput.value)||0;
+  const d=parseFloat(compareDaysInput.value)||0;
+  const pr=parseFloat(comparePriceInput.value)||0;
+
+  const kA=pA/1000*hA*d;
+  const kB=pB/1000*hB*d;
+
+  const mA=kA*pr;
+  const mB=kB*pr;
+
+  const yA=mA*12;
+  const yB=mB*12;
+
+  const diffYear=Math.abs(yA-yB);
+  const diffFive=diffYear*5;
+
+  const f=new Intl.NumberFormat('de-DE',{
+    minimumFractionDigits:2,
+    maximumFractionDigits:2
+  });
+
+  compareLabelA.textContent=nameA;
+  compareLabelB.textContent=nameB;
+
+  compareKwhA.textContent=f.format(kA)+' kWh';
+  compareKwhB.textContent=f.format(kB)+' kWh';
+
+  compareMonthlyA.textContent=f.format(mA)+' €';
+  compareMonthlyB.textContent=f.format(mB)+' €';
+
+  compareAnnualA.textContent=f.format(yA)+' €';
+  compareAnnualB.textContent=f.format(yB)+' €';
+
+  compareDiffYear.textContent=f.format(diffYear)+' €';
+  compareDiffFive.textContent=f.format(diffFive)+' €';
+
+  if(yA<yB){
+    compareMessage.textContent=
+      nameA+' ist bei diesen Annahmen '+f.format(diffYear)+' € pro Jahr günstiger.';
+  }else if(yB<yA){
+    compareMessage.textContent=
+      nameB+' ist bei diesen Annahmen '+f.format(diffYear)+' € pro Jahr günstiger.';
+  }else{
+    compareMessage.textContent=
+      'Beide Geräte kosten bei diesen Annahmen gleich viel.';
+  }
+}
+
+[
+  deviceAInput,
+  deviceBInput,
+  powerAInput,
+  powerBInput,
+  hoursAInput,
+  hoursBInput,
+  compareDaysInput,
+  comparePriceInput
+].forEach(i=>i.addEventListener('input',calculateComparison));
+
+calculateComparison();
 </script>
 </body></html>
