@@ -87,9 +87,7 @@ outline-offset:3px;
   gap:15px;
 }
 @media(max-width:800px){
-  .compare-grid{
-    grid-template-columns:1fr;
-  }
+  
 }
 .compare-heading{
   margin-top:0;
@@ -324,7 +322,7 @@ fiveYearOutput.textContent=f.format(fiveYear)+' €';
 }
 
 
-document.querySelectorAll('input').forEach(i=>i.addEventListener('input',calculate));calculate();
+[powerInput,hoursInput,daysInput,priceInput].forEach(i=>i.addEventListener('input',calculate));calculate();
 const deviceAInput=document.getElementById('deviceA');
 const deviceBInput=document.getElementById('deviceB');
 const powerAInput=document.getElementById('powerA');
