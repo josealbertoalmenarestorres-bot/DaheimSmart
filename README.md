@@ -28,6 +28,7 @@ Aktuell enthalten:
 - Hero-Bild für DaheimSmart
 - Bereiche für Energie, Sicherheit, Komfort und Kosten
 - interaktiver Stromkosten-Rechner
+- interaktiver Vergleich von zwei Geräten
 - barrierearmer „Zum Inhalt springen“-Link
 - automatische Veröffentlichung über GitHub Actions
 
