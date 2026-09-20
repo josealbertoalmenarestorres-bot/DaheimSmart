@@ -42,3 +42,4 @@ DaheimSmart/
 └── .github/
     └── workflows/
         └── static.yml
+```
