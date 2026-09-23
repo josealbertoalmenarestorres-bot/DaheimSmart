@@ -661,22 +661,22 @@ function calculateComparison(){
 }
 
 
-  window.addEventListener('DOMContentLoaded',function(){
-
   [
-    deviceAInput,
-    deviceBInput,
-    powerAInput,
-    powerBInput,
-    hoursAInput,
-    hoursBInput,
-    compareDaysInput,
-    comparePriceInput
-  ].forEach(function(i){
-    if(i){
-      i.addEventListener('input',calculateComparison);
-    }
-  });
+  deviceAInput,
+  deviceBInput,
+  powerAInput,
+  powerBInput,
+  hoursAInput,
+  hoursBInput,
+  compareDaysInput,
+  comparePriceInput
+].forEach(function(i){
+  if(i){
+    i.addEventListener('input',calculateComparison);
+  }
+});
+
+calculateComparison();
 
   calculateComparison();
 
