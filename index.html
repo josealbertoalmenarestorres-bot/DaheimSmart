@@ -217,6 +217,80 @@ outline-offset:3px;
     grid-template-columns:1fr;
   }
 }
+.solution-paths{
+  margin-top:32px;
+  padding:28px;
+  background:#102019;
+  border-radius:18px;
+  color:white;
+}
+
+.solution-paths .eyebrow{
+  text-align:center;
+}
+
+.solution-paths h2{
+  color:white;
+  margin:8px 0 10px;
+}
+
+.solution-paths .lead{
+  color:#dce7df;
+  margin-bottom:24px;
+}
+
+.solution-path-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+}
+
+.solution-path-card{
+  display:block;
+  background:white;
+  color:#17201a;
+  padding:20px;
+  border-radius:15px;
+  text-decoration:none;
+  border:1px solid #e1e8e2;
+  transition:transform .2s,box-shadow .2s;
+}
+
+.solution-path-card:hover{
+  transform:translateY(-3px);
+  box-shadow:0 8px 22px #00000020;
+}
+
+.solution-path-icon{
+  display:block;
+  font-size:2rem;
+  margin-bottom:10px;
+}
+
+.solution-path-card strong{
+  display:block;
+  color:#244d32;
+  font-size:1.1rem;
+  margin-bottom:7px;
+}
+
+.solution-path-card span:not(.solution-path-icon){
+  display:block;
+  color:#5a665e;
+  font-size:.92rem;
+}
+
+.solution-path-link{
+  margin-top:15px;
+  color:#2f7042 !important;
+  font-weight:700;
+}
+
+@media(max-width:800px){
+  .solution-path-grid{
+    grid-template-columns:1fr;
+  }
+}
 </style>
 </head>
 <body>
@@ -354,7 +428,38 @@ outline-offset:3px;
 
   </div>
   
+  <div class="solution-paths">
+    <div class="eyebrow">Lösungen, die zu deinem Ziel passen</div>
+    <h2>Welche Lösung passt zu dir?</h2>
+    <p class="lead">
+      Entdecke einfache Smart-Home-Lösungen für dein konkretes Ziel.
+    </p>
 
+    <div class="solution-path-grid">
+
+      <a class="solution-path-card" href="#rechner">
+        <span class="solution-path-icon">⚡</span>
+        <strong>Energie besser verstehen</strong>
+        <span>Verbrauch messen, Kosten berechnen und Stromfresser erkennen.</span>
+        <span class="solution-path-link">Energie-Lösungen entdecken →</span>
+      </a>
+
+      <a class="solution-path-card" href="#ratgeber">
+        <span class="solution-path-icon">🔐</span>
+        <strong>Sicherheit erhöhen</strong>
+        <span>Sensoren, Benachrichtigungen und einfache Sicherheitslösungen verstehen.</span>
+        <span class="solution-path-link">Sicherheitslösungen entdecken →</span>
+      </a>
+
+      <a class="solution-path-card" href="#ratgeber">
+        <span class="solution-path-icon">🏠</span>
+        <strong>Mehr Komfort erleben</strong>
+        <span>Licht, Heizung und Alltag mit einfachen Automationen erleichtern.</span>
+        <span class="solution-path-link">Komfortlösungen entdecken →</span>
+      </a>
+
+    </div>
+  </div>
 </div><div class="proof-strip">Unser Prinzip: Messen statt raten. Erst der sichtbare Nutzen, dann die Erklärung.</div></section>
   <section class="section" id="rechner"><div class="eyebrow" style="text-align:center">DaheimSmart Rechner</div><h2>Was kostet dein Gerät wirklich?</h2><p class="lead">Gib die Werte deines Geräts ein und berechne Stromverbrauch und Kosten. Das Ergebnis basiert auf deinen Angaben.</p>
 <div class="calculator"><h3>⚡ Stromkosten berechnen</h3><p class="calc-intro">Alle Werte sind veränderbar. Kein Login und keine Speicherung.</p>
