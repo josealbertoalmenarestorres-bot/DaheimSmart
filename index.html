@@ -348,6 +348,52 @@ outline-offset:3px;
     grid-template-columns:1fr;
   }
 }
+.tech-types {
+  margin-top: 2rem;
+}
+
+.tech-types-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+  margin-top: 1.5rem;
+}
+
+.tech-type-card {
+  background: #ffffff;
+  border: 1px solid #dce5de;
+  border-radius: 18px;
+  padding: 1.4rem;
+  box-shadow: 0 8px 24px rgba(23, 32, 26, 0.06);
+}
+
+.tech-type-icon {
+  font-size: 2rem;
+  margin-bottom: 0.7rem;
+}
+
+.tech-type-card h3 {
+  margin: 0 0 0.6rem;
+}
+
+.tech-type-card p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.tech-type-use {
+  margin-top: 1rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid #e5ebe6;
+  font-size: 0.95rem;
+  color: #3e4d43;
+}
+
+@media (max-width: 800px) {
+  .tech-types-grid {
+    grid-template-columns: 1fr;
+  }
+}
 </style>
 </head>
 <body>
@@ -555,6 +601,60 @@ outline-offset:3px;
       </article>
 
     </div>
+  </div>
+  <div class="tech-types">
+
+  <p class="eyebrow">Was ist das eigentlich?</p>
+
+  <h2>Welche Technik steckt dahinter?</h2>
+
+  <p>
+    Hinter jeder Smart-Home-Lösung steckt eine bestimmte Art von Technik.
+    Hier erklären wir sie einfach und ohne Fachbegriffe.
+  </p>
+
+  <div class="tech-types-grid">
+
+    <div class="tech-type-card">
+      <div class="tech-type-icon">📊</div>
+      <h3>Verbrauch messen</h3>
+      <p>
+        Eine smarte Steckdose oder ein Messgerät zeigt,
+        wie viel Strom ein Gerät tatsächlich verbraucht.
+      </p>
+      <div class="tech-type-use">
+        <strong>Beispiel:</strong> Du möchtest wissen,
+        wie viel deine Waschmaschine oder dein Fernseher kostet.
+      </div>
+    </div>
+
+    <div class="tech-type-card">
+      <div class="tech-type-icon">🔔</div>
+      <h3>Ereignisse erkennen</h3>
+      <p>
+        Sensoren erkennen zum Beispiel, ob eine Tür oder ein Fenster
+        geöffnet wurde oder ob Bewegung stattfindet.
+      </p>
+      <div class="tech-type-use">
+        <strong>Beispiel:</strong> Du möchtest eine Benachrichtigung
+        erhalten, wenn eine Tür geöffnet wird.
+      </div>
+    </div>
+
+    <div class="tech-type-card">
+      <div class="tech-type-icon">⚙️</div>
+      <h3>Automatisieren</h3>
+      <p>
+        Eine Smart-Home-Steuerung verbindet Geräte und kann
+        bestimmte Aktionen automatisch auslösen.
+      </p>
+      <div class="tech-type-use">
+        <strong>Beispiel:</strong> Beim Nachhausekommen geht das Licht
+        automatisch an.
+      </div>
+    </div>
+
+  </div>
   </div>
   </div><div class="proof-strip">Unser Prinzip: Messen statt raten. Erst der sichtbare Nutzen, dann die Erklärung.</div></section>
   <section class="section" id="rechner"><div class="eyebrow" style="text-align:center">DaheimSmart Rechner</div><h2>Was kostet dein Gerät wirklich?</h2><p class="lead">Gib die Werte deines Geräts ein und berechne Stromverbrauch und Kosten. Das Ergebnis basiert auf deinen Angaben.</p>
