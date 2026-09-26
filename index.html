@@ -291,6 +291,63 @@ outline-offset:3px;
     grid-template-columns:1fr;
   }
 }
+.tech-help{
+  margin-top:32px;
+  padding:28px;
+  background:#f0f6f1;
+  border:1px solid #dfe9e1;
+  border-radius:18px;
+}
+
+.tech-help .eyebrow{
+  text-align:center;
+}
+
+.tech-help h2{
+  text-align:center;
+  margin:8px 0 10px;
+}
+
+.tech-help .lead{
+  margin-bottom:24px;
+}
+
+.tech-help-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+}
+
+.tech-help-card{
+  background:white;
+  border:1px solid #e1e8e2;
+  border-radius:15px;
+  padding:20px;
+}
+
+.tech-help-icon{
+  font-size:2rem;
+  display:block;
+  margin-bottom:10px;
+}
+
+.tech-help-card strong{
+  display:block;
+  color:#244d32;
+  font-size:1.05rem;
+  margin-bottom:8px;
+}
+
+.tech-help-card p{
+  color:#5a665e;
+  font-size:.92rem;
+}
+
+@media(max-width:800px){
+  .tech-help-grid{
+    grid-template-columns:1fr;
+  }
+}
 </style>
 </head>
 <body>
@@ -460,7 +517,46 @@ outline-offset:3px;
 
     </div>
   </div>
-</div><div class="proof-strip">Unser Prinzip: Messen statt raten. Erst der sichtbare Nutzen, dann die Erklärung.</div></section>
+  <div class="tech-help">
+    <div class="eyebrow">Technik verstehen</div>
+    <h2>Welche Technik kann dabei helfen?</h2>
+    <p class="lead">
+      Nicht jedes Zuhause braucht die gleiche Lösung.
+      Entscheidend ist, welches Problem du wirklich lösen möchtest.
+    </p>
+
+    <div class="tech-help-grid">
+
+      <article class="tech-help-card">
+        <span class="tech-help-icon">📊</span>
+        <strong>Energie messen</strong>
+        <p>
+          Energieverbrauch sichtbar machen und erkennen,
+          welche Geräte tatsächlich Strom verbrauchen.
+        </p>
+      </article>
+
+      <article class="tech-help-card">
+        <span class="tech-help-icon">🔔</span>
+        <strong>Ereignisse erkennen</strong>
+        <p>
+          Sensoren können Türen, Fenster oder Bewegungen erkennen
+          und dich über wichtige Ereignisse informieren.
+        </p>
+      </article>
+
+      <article class="tech-help-card">
+        <span class="tech-help-icon">⚙️</span>
+        <strong>Automatisieren</strong>
+        <p>
+          Licht, Heizung und andere Geräte können abhängig
+          von bestimmten Situationen automatisch reagieren.
+        </p>
+      </article>
+
+    </div>
+  </div>
+  </div><div class="proof-strip">Unser Prinzip: Messen statt raten. Erst der sichtbare Nutzen, dann die Erklärung.</div></section>
   <section class="section" id="rechner"><div class="eyebrow" style="text-align:center">DaheimSmart Rechner</div><h2>Was kostet dein Gerät wirklich?</h2><p class="lead">Gib die Werte deines Geräts ein und berechne Stromverbrauch und Kosten. Das Ergebnis basiert auf deinen Angaben.</p>
 <div class="calculator"><h3>⚡ Stromkosten berechnen</h3><p class="calc-intro">Alle Werte sind veränderbar. Kein Login und keine Speicherung.</p>
 <div class="form-grid"><div><label for="power">Leistung des Geräts (Watt)</label><input id="power" type="number" min="0" step="1" value="100"></div><div><label for="hours">Stunden pro Tag</label><input id="hours" type="number" min="0" step="0.1" value="4"></div><div><label for="days">Tage pro Monat</label><input id="days" type="number" min="0" step="1" value="30"></div><div><label for="price">Strompreis (€/kWh)</label><input id="price" type="number" min="0" step="0.01" value="0.35"></div></div>
