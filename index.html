@@ -394,6 +394,83 @@ outline-offset:3px;
     grid-template-columns: 1fr;
   }
 }
+.device-types {
+  margin-top: 2rem;
+  padding: 28px;
+  background: #102019;
+  border-radius: 18px;
+  color: white;
+}
+
+.device-types .eyebrow {
+  text-align: center;
+}
+
+.device-types h2 {
+  text-align: center;
+  color: white;
+  margin: 8px 0 10px;
+}
+
+.device-types-intro {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 24px;
+  color: #dce7df;
+}
+
+.device-types-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.device-type-card {
+  background: white;
+  color: #17201a;
+  border-radius: 15px;
+  padding: 20px;
+  border: 1px solid #e1e8e2;
+}
+
+.device-type-icon {
+  display: block;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.device-type-card strong {
+  display: block;
+  color: #244d32;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.device-type-card p {
+  color: #5a665e;
+  font-size: .92rem;
+  margin: 0;
+}
+
+.device-type-example {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid #e1e8e2;
+  color: #3e4d43;
+  font-size: .9rem;
+}
+
+.device-type-example strong {
+  display: inline;
+  color: #244d32;
+  font-size: .9rem;
+}
+
+@media(max-width:800px) {
+  .device-types-grid {
+    grid-template-columns: 1fr;
+  }
+}
 </style>
 </head>
 <body>
@@ -653,6 +730,71 @@ outline-offset:3px;
         automatisch an.
       </div>
     </div>
+
+  </div>
+  </div>
+  <div class="device-types">
+
+  <div class="eyebrow">Welches Gerät brauche ich dafür?</div>
+
+  <h2>Welche Geräte können dabei helfen?</h2>
+
+  <p class="device-types-intro">
+    Jetzt wird es konkret: Je nach Ziel gibt es unterschiedliche Geräte.
+    Du musst nicht alles vernetzen – entscheidend ist die richtige Lösung für dein Problem.
+  </p>
+
+  <div class="device-types-grid">
+
+    <article class="device-type-card">
+      <span class="device-type-icon">⚡</span>
+
+      <strong>Energie messen</strong>
+
+      <p>
+        Smarte Steckdosen oder Energiemessgeräte können sichtbar machen,
+        wie viel Strom ein angeschlossenes Gerät verbraucht.
+      </p>
+
+      <div class="device-type-example">
+        <strong>Geeignet für:</strong>
+        Stromverbrauch verstehen und mögliche Stromfresser erkennen.
+      </div>
+    </article>
+
+
+    <article class="device-type-card">
+      <span class="device-type-icon">🔐</span>
+
+      <strong>Sicherheit erhöhen</strong>
+
+      <p>
+        Tür- und Fenstersensoren sowie Bewegungsmelder können erkennen,
+        wenn zu Hause etwas passiert.
+      </p>
+
+      <div class="device-type-example">
+        <strong>Geeignet für:</strong>
+        Benachrichtigungen erhalten und wichtige Ereignisse erkennen.
+      </div>
+    </article>
+
+
+    <article class="device-type-card">
+      <span class="device-type-icon">🏠</span>
+
+      <strong>Komfort verbessern</strong>
+
+      <p>
+        Smarte Lampen, Thermostate und andere kompatible Geräte
+        können bestimmte Abläufe im Alltag vereinfachen.
+      </p>
+
+      <div class="device-type-example">
+        <strong>Geeignet für:</strong>
+        Licht, Temperatur und andere Abläufe komfortabler gestalten.
+      </div>
+    </article>
 
   </div>
   </div>
