@@ -471,6 +471,76 @@ outline-offset:3px;
     grid-template-columns: 1fr;
   }
 }
+.device-criteria {
+  margin-top: 2rem;
+  padding: 28px;
+  background: #f0f6f1;
+  border: 1px solid #dfe9e1;
+  border-radius: 18px;
+}
+
+.device-criteria .eyebrow {
+  text-align: center;
+}
+
+.device-criteria h2 {
+  text-align: center;
+  margin: 8px 0 10px;
+}
+
+.device-criteria-intro {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 24px;
+  color: #5a665e;
+}
+
+.device-criteria-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.device-criteria-card {
+  background: white;
+  border: 1px solid #e1e8e2;
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.device-criteria-icon {
+  display: block;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.device-criteria-card strong {
+  display: block;
+  color: #244d32;
+  font-size: 1.05rem;
+  margin-bottom: 7px;
+}
+
+.device-criteria-card p {
+  color: #5a665e;
+  font-size: .92rem;
+  margin: 0;
+}
+
+.device-criteria-question {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid #e1e8e2;
+  color: #3e4d43;
+  font-size: .88rem;
+  font-weight: 700;
+}
+
+@media(max-width:800px) {
+  .device-criteria-grid {
+    grid-template-columns: 1fr;
+  }
+}
 </style>
 </head>
 <body>
@@ -793,6 +863,93 @@ outline-offset:3px;
       <div class="device-type-example">
         <strong>Geeignet für:</strong>
         Licht, Temperatur und andere Abläufe komfortabler gestalten.
+      </div>
+    </article>
+
+  </div>
+  </div>
+  <div class="device-criteria">
+
+  <div class="eyebrow">Vor dem Kauf prüfen</div>
+
+  <h2>Worauf solltest du achten?</h2>
+
+  <p class="device-criteria-intro">
+    Der günstigste Preis ist nicht automatisch die beste Lösung.
+    Vergleiche die Punkte, die für dein Zuhause wirklich wichtig sind.
+  </p>
+
+  <div class="device-criteria-grid">
+
+    <article class="device-criteria-card">
+      <span class="device-criteria-icon">🔌</span>
+      <strong>Kompatibilität</strong>
+      <p>
+        Funktioniert das Gerät mit deinem Smartphone und
+        deinem vorhandenen Smart-Home-System?
+      </p>
+      <div class="device-criteria-question">
+        Passt es zu meiner vorhandenen Technik?
+      </div>
+    </article>
+
+    <article class="device-criteria-card">
+      <span class="device-criteria-icon">📱</span>
+      <strong>Bedienung</strong>
+      <p>
+        Ist die Einrichtung einfach und kannst du das Gerät
+        problemlos im Alltag bedienen?
+      </p>
+      <div class="device-criteria-question">
+        Kann ich es ohne Technik-Frust nutzen?
+      </div>
+    </article>
+
+    <article class="device-criteria-card">
+      <span class="device-criteria-icon">🔐</span>
+      <strong>Sicherheit & Datenschutz</strong>
+      <p>
+        Welche Daten werden verarbeitet und wie wird das Gerät
+        geschützt und aktualisiert?
+      </p>
+      <div class="device-criteria-question">
+        Sind meine Daten ausreichend geschützt?
+      </div>
+    </article>
+
+    <article class="device-criteria-card">
+      <span class="device-criteria-icon">⚡</span>
+      <strong>Verbrauch</strong>
+      <p>
+        Auch ein smartes Gerät benötigt Energie.
+        Der eigene Verbrauch sollte zum Nutzen passen.
+      </p>
+      <div class="device-criteria-question">
+        Wie viel Strom benötigt das Gerät?
+      </div>
+    </article>
+
+    <article class="device-criteria-card">
+      <span class="device-criteria-icon">💶</span>
+      <strong>Gesamtkosten</strong>
+      <p>
+        Berücksichtige neben dem Kaufpreis auch Zubehör,
+        Energieverbrauch und mögliche weitere Kosten.
+      </p>
+      <div class="device-criteria-question">
+        Was kostet mich das Gerät langfristig?
+      </div>
+    </article>
+
+    <article class="device-criteria-card">
+      <span class="device-criteria-icon">🛠️</span>
+      <strong>Installation</strong>
+      <p>
+        Prüfe, ob du das Gerät selbst installieren kannst
+        oder zusätzliche Hilfe benötigst.
+      </p>
+      <div class="device-criteria-question">
+        Wie aufwendig ist die Einrichtung?
       </div>
     </article>
 
