@@ -535,7 +535,88 @@ outline-offset:3px;
   font-size: .88rem;
   font-weight: 700;
 }
+.device-comparison {
+  margin-top: 2rem;
+  padding: 28px;
+  background: #102019;
+  border-radius: 18px;
+  color: white;
+}
 
+.device-comparison .eyebrow {
+  text-align: center;
+}
+
+.device-comparison h2 {
+  text-align: center;
+  color: white;
+  margin: 8px 0 10px;
+}
+
+.device-comparison-intro {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 24px;
+  color: #dce7df;
+}
+
+.comparison-table {
+  display: grid;
+  grid-template-columns: minmax(0,1.4fr) minmax(0,1fr) minmax(0,1fr);
+  width: 100%;
+  gap: 1px;
+  background: #dfe8e1;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.comparison-table > div {
+  background: white;
+  color: #17201a;
+  padding: 13px;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.comparison-head {
+  font-weight: 800;
+  color: #244d32 !important;
+}
+
+.comparison-check {
+  color: #2f7042;
+  font-weight: 800;
+}
+
+.comparison-note {
+  margin-top: 16px;
+  background: #e9f4eb;
+  color: #17201a;
+  border-radius: 12px;
+  padding: 15px;
+}
+
+.comparison-note strong {
+  display: block;
+  color: #244d32;
+  margin-bottom: 5px;
+}
+
+.comparison-note span {
+  color: #5a665e;
+  font-size: .9rem;
+}
+
+@media(max-width:800px) {
+  .comparison-table {
+    grid-template-columns: minmax(0,1.3fr) minmax(0,1fr) minmax(0,1fr);
+    font-size: .88rem;
+  }
+
+  .comparison-table > div {
+    padding: 10px;
+  }
+}
 @media(max-width:800px) {
   .device-criteria-grid {
     grid-template-columns: 1fr;
