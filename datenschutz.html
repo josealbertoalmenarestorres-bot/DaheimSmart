@@ -7,94 +7,138 @@
 <title>Datenschutz – DaheimSmart</title>
 
 <style>
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
+:root {
+  --green: #2f6f4e;
+  --green-light: #e9f3ed;
+  --dark: #1f2933;
+  --text: #374151;
+  --white: #ffffff;
+  --border: #dfe7e2;
+  --bg: #f7faf8;
 }
 
-body{
-  font-family:Arial,sans-serif;
-  background:#f5f7f5;
-  color:#17201a;
-  line-height:1.6;
+* {
+  box-sizing: border-box;
 }
 
-main{
-  max-width:850px;
-  margin:0 auto;
-  padding:55px 6%;
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
 }
 
-.card{
-  background:#ffffff;
-  border:1px solid #dfe8e1;
-  border-radius:18px;
-  padding:30px;
-  box-shadow:0 5px 18px #1020190b;
+header {
+  background: var(--dark);
+  color: var(--white);
+  padding: 24px 20px;
 }
 
-h1{
-  color:#244d32;
-  margin-bottom:8px;
+.header-inner {
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-h2{
-  color:#244d32;
-  font-size:1.15rem;
-  margin:28px 0 8px;
+.logo {
+  color: var(--white);
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
-p{
-  color:#4f5d54;
-  margin:8px 0;
+main {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
 }
 
-ul{
-  margin:10px 0 10px 22px;
-  color:#4f5d54;
+article {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.04);
 }
 
-li{
-  margin-bottom:7px;
+h1 {
+  color: var(--dark);
+  font-size: 2.2rem;
+  margin-top: 0;
 }
 
-a{
-  color:#2f7042;
-  font-weight:700;
+h2 {
+  color: var(--green);
+  margin-top: 32px;
 }
 
-.back{
-  display:inline-block;
-  margin-bottom:24px;
+h3 {
+  color: var(--dark);
 }
 
-.note{
-  margin-top:28px;
-  padding:14px;
-  background:#e9f4eb;
-  border-radius:12px;
-  color:#3e4d43;
-  font-size:.9rem;
+a {
+  color: var(--green);
+  font-weight: 600;
+}
+
+.info-box {
+  background: var(--green-light);
+  border-left: 4px solid var(--green);
+  padding: 16px 18px;
+  border-radius: 8px;
+  margin: 24px 0;
+}
+
+footer {
+  margin-top: 50px;
+  padding: 30px 20px;
+  background: var(--dark);
+  color: var(--white);
+  text-align: center;
+}
+
+footer a {
+  color: #8fd19e;
+}
+
+@media (max-width: 600px) {
+  article {
+    padding: 22px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
 }
 </style>
 </head>
 
 <body>
 
+<header>
+  <div class="header-inner">
+    <a class="logo" href="index.html">DaheimSmart</a>
+  </div>
+</header>
+
 <main>
-
-<a class="back" href="index.html">← Zurück zu DaheimSmart</a>
-
-<div class="card">
+<article>
 
 <h1>Datenschutzerklärung</h1>
 
 <p>
 Der Schutz deiner persönlichen Daten ist uns wichtig.
-Diese Datenschutzerklärung beschreibt, welche personenbezogenen Daten
-im Zusammenhang mit der Nutzung von DaheimSmart verarbeitet werden können.
+Diese Datenschutzerklärung erklärt, welche personenbezogenen Daten beim Besuch
+von DaheimSmart verarbeitet werden können und zu welchen Zwecken dies geschieht.
 </p>
+
+<div class="info-box">
+  <strong>Stand:</strong> 1. Oktober 2026
+</div>
 
 <h2>1. Verantwortlicher</h2>
 
@@ -115,159 +159,251 @@ Josealbertoalmenarestorres@gmail.com
 <h2>2. Allgemeine Informationen</h2>
 
 <p>
-DaheimSmart ist derzeit ein persönliches Projekt und wird aktuell
-ohne eingetragene geschäftliche Tätigkeit betrieben.
+DaheimSmart ist derzeit ein persönliches Projekt und wird aktuell ohne
+eingetragene geschäftliche Tätigkeit betrieben.
+</p>
+
+<p>
 Die Website dient dazu, Informationen über Smart-Home-Technik,
-Energie, Sicherheit, Komfort und Kosten verständlich aufzubereiten.
+Energieverbrauch, Sicherheit, Komfort und vergleichbare Themen verständlich
+aufzubereiten.
+</p>
+
+<p>
+Wir verarbeiten personenbezogene Daten nur, soweit dies für den sicheren,
+technisch notwendigen und ordnungsgemäßen Betrieb der Website erforderlich ist
+oder du uns Daten freiwillig zur Verfügung stellst.
 </p>
 
 <h2>3. Hosting über GitHub Pages</h2>
 
 <p>
-DaheimSmart wird über GitHub Pages veröffentlicht.
-Beim Aufruf der Website können durch die technische Infrastruktur
-des Hosting-Anbieters Informationen über den Zugriff verarbeitet werden.
-Dazu können insbesondere IP-Adresse, Datum und Uhrzeit des Zugriffs,
-technische Informationen zum verwendeten Gerät sowie Informationen
-über die Nutzung des Dienstes gehören.
+DaheimSmart wird über <strong>GitHub Pages</strong> veröffentlicht.
+GitHub stellt hierfür die technische Infrastruktur zur Verfügung.
 </p>
 
 <p>
-Diese Verarbeitung kann insbesondere der Bereitstellung, Sicherheit,
-Stabilität und dem Schutz der technischen Infrastruktur dienen.
-Für die Verarbeitung durch GitHub gelten zusätzlich die
-Datenschutzbestimmungen von GitHub.
-</p>
-
-<h2>4. Keine eigenen Benutzerkonten oder Newsletter</h2>
-
-<p>
-DaheimSmart bietet derzeit keine eigenen Benutzerkonten,
-Registrierungen, Newsletter oder Kundenkonten an.
+Beim Aufruf der Website können technisch erforderliche Informationen verarbeitet
+werden, insbesondere IP-Adresse, Zeitpunkt des Zugriffs, verwendetes Gerät,
+Betriebssystem, Browserinformationen und weitere technische Zugriffsdaten.
+Diese Daten können insbesondere für Sicherheitszwecke, zur Fehleranalyse und
+zur Stabilität des Dienstes verarbeitet werden.
 </p>
 
 <p>
-Die Website enthält derzeit auch kein eigenes Kontaktformular.
+Die Verarbeitung erfolgt, soweit dies erforderlich ist, auf Grundlage von
+<strong>Art. 6 Abs. 1 lit. f DSGVO</strong>. Das berechtigte Interesse liegt
+darin, eine sichere, stabile und funktionsfähige Website bereitzustellen und
+Missbrauch oder technische Angriffe erkennen und abwehren zu können.
 </p>
 
-<h2>5. Rechner und Vergleichswerkzeuge</h2>
+<p>
+Weitere Informationen zur Datenverarbeitung durch GitHub findest du in der
+<a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement"
+target="_blank" rel="noopener noreferrer">
+Datenschutzerklärung von GitHub
+</a>.
+</p>
+
+<h2>4. Empfänger und Drittanbieter</h2>
+
+<p>
+Für den technischen Betrieb der Website wird GitHub als Hosting- und
+Infrastruktur-Anbieter eingesetzt.
+</p>
+
+<p>
+DaheimSmart betreibt derzeit keine eigene Werbeplattform und verkauft keine
+personenbezogenen Daten an Dritte.
+</p>
+
+<p>
+Soweit externe Dienste oder Anbieter zukünftig eingebunden werden, wird diese
+Datenschutzerklärung entsprechend aktualisiert.
+</p>
+
+<h2>5. Keine Benutzerkonten und kein Newsletter</h2>
+
+<p>
+DaheimSmart bietet derzeit keine Registrierung von Benutzerkonten,
+keinen Mitgliederbereich und keinen Newsletter an.
+</p>
+
+<p>
+Es werden daher über die Website derzeit keine entsprechenden Kontodaten,
+Passwörter oder Newsletter-Anmeldedaten erhoben.
+</p>
+
+<h2>6. Rechner und Vergleichswerkzeuge</h2>
 
 <p>
 DaheimSmart enthält interaktive Werkzeuge, beispielsweise einen
 Stromkosten-Rechner und einen Produktvergleich.
-Die dabei eingegebenen Werte werden aktuell direkt im Browser
-des Nutzers verarbeitet.
 </p>
 
 <p>
-Nach dem derzeitigen technischen Stand werden diese Eingaben
-durch DaheimSmart nicht über einen eigenen Server gespeichert
-oder an einen eigenen Server übertragen.
-</p>
-
-<h2>6. Kontakt per E-Mail</h2>
-
-<p>
-Wenn du DaheimSmart per E-Mail kontaktierst, werden die von dir
-übermittelten Angaben und der Inhalt deiner Nachricht verarbeitet,
-soweit dies für die Bearbeitung deiner Anfrage erforderlich ist.
+Die von dir eingegebenen Werte werden aktuell direkt in deinem Browser
+verarbeitet. Die Berechnungen dienen ausschließlich dazu, dir die Ergebnisse
+auf der Website anzuzeigen.
 </p>
 
 <p>
-Die Daten werden nicht für andere Zwecke verwendet, soweit keine
-entsprechende rechtliche Grundlage oder deine Einwilligung dafür besteht.
+DaheimSmart speichert diese Eingaben derzeit nicht auf einem eigenen Server
+und erstellt daraus kein persönliches Benutzerprofil.
 </p>
 
-<h2>7. Cookies und eigene Tracking-Technologien</h2>
+<h2>7. Kontakt per E-Mail</h2>
 
 <p>
-DaheimSmart verwendet nach dem derzeitigen Stand keine eigenen
-Analyse- oder Werbe-Tracking-Systeme und setzt keine eigenen
-Marketing-Cookies ein.
-</p>
-
-<p>
-Durch die Nutzung von GitHub Pages oder extern eingebundenen Diensten
-können jedoch technische Cookies oder vergleichbare Technologien
-des jeweiligen Anbieters zum Einsatz kommen.
-Für solche Datenverarbeitungen gelten die jeweiligen
-Datenschutzinformationen des Anbieters.
-</p>
-
-<h2>8. Externe Links</h2>
-
-<p>
-DaheimSmart kann Links zu externen Websites, Herstellern und
-anderen Informationsangeboten enthalten.
-Beim Aufruf einer externen Website gelten die Datenschutzbestimmungen
-des jeweiligen Betreibers.
+Wenn du DaheimSmart per E-Mail kontaktierst, werden die von dir übermittelten
+Daten verarbeitet, soweit dies zur Bearbeitung deiner Anfrage erforderlich ist.
+Dazu können insbesondere deine E-Mail-Adresse, dein Name und der Inhalt deiner
+Nachricht gehören.
 </p>
 
 <p>
-DaheimSmart hat keinen Einfluss auf die Datenverarbeitung
-durch externe Anbieter.
+Die Verarbeitung erfolgt je nach Inhalt und Zweck der Anfrage auf Grundlage
+von <strong>Art. 6 Abs. 1 lit. b DSGVO</strong>, soweit die Bearbeitung für
+vorvertragliche Maßnahmen erforderlich ist, oder auf Grundlage von
+<strong>Art. 6 Abs. 1 lit. f DSGVO</strong>, wenn ein berechtigtes Interesse
+an der Bearbeitung und Beantwortung deiner Anfrage besteht.
 </p>
 
-<h2>9. Affiliate-Links und zukünftige Erweiterungen</h2>
-
 <p>
-Derzeit befindet sich DaheimSmart in einer persönlichen
-Entwicklungsphase.
-Sollten zukünftig Affiliate-Links, Analysewerkzeuge,
-Kontaktformulare, eingebettete Dienste, Newsletter oder andere
-Funktionen hinzukommen, wird diese Datenschutzerklärung
-entsprechend aktualisiert.
+Die übermittelten Daten werden nur so lange aufbewahrt, wie dies für die
+Bearbeitung der Anfrage erforderlich ist oder gesetzliche
+Aufbewahrungspflichten bestehen.
 </p>
 
-<h2>10. Deine Rechte</h2>
+<h2>8. Cookies und eigene Tracking-Technologien</h2>
 
 <p>
-Nach Maßgabe der gesetzlichen Vorschriften hast du insbesondere
-folgende Rechte:
+DaheimSmart setzt derzeit keine eigenen Analyse- oder Tracking-Systeme wie
+Google Analytics, Matomo oder Facebook Pixel ein.
+</p>
+
+<p>
+Es werden von DaheimSmart derzeit keine eigenen Marketing-Cookies eingesetzt,
+um dein Verhalten zu Werbezwecken zu verfolgen.
+</p>
+
+<p>
+Technisch erforderliche Datenverarbeitungen durch den Hosting-Anbieter bleiben
+davon unberührt.
+</p>
+
+<h2>9. Externe Links</h2>
+
+<p>
+Die Website kann Links zu externen Websites enthalten, beispielsweise zu
+Herstellern, Produktseiten oder anderen Informationsquellen.
+</p>
+
+<p>
+Beim Anklicken eines solchen Links verlässt du die Website von DaheimSmart.
+Für die Datenverarbeitung auf der jeweiligen externen Website ist deren
+Betreiber verantwortlich.
+</p>
+
+<p>
+Bitte beachte daher auch die Datenschutzerklärung des jeweiligen Anbieters.
+</p>
+
+<h2>10. Affiliate-Links und zukünftige Erweiterungen</h2>
+
+<p>
+DaheimSmart kann zukünftig Links zu Produkten oder Dienstleistungen enthalten,
+über die eine Provision erzielt werden kann.
+</p>
+
+<p>
+Eine solche zukünftige Erweiterung wird nur umgesetzt, soweit sie mit den
+geltenden gesetzlichen Anforderungen vereinbar ist.
+</p>
+
+<p>
+Falls dadurch zusätzliche personenbezogene Daten verarbeitet oder Cookies,
+Tracking-Technologien oder vergleichbare Dienste eingesetzt werden, wird
+diese Datenschutzerklärung entsprechend angepasst.
+</p>
+
+<h2>11. Speicherdauer</h2>
+
+<p>
+DaheimSmart selbst speichert derzeit keine Eingaben aus dem Stromkosten-
+Rechner oder dem Produktvergleich auf einem eigenen Server.
+</p>
+
+<p>
+Technische Zugriffsdaten können durch den eingesetzten Hosting-Anbieter im
+Rahmen seiner eigenen technischen, sicherheitsbezogenen und gesetzlichen
+Vorgaben verarbeitet und gespeichert werden.
+</p>
+
+<p>
+Die konkrete Speicherdauer richtet sich nach den jeweiligen technischen und
+rechtlichen Vorgaben des eingesetzten Anbieters.
+</p>
+
+<h2>12. Deine Rechte</h2>
+
+<p>
+Du hast nach Maßgabe der gesetzlichen Voraussetzungen insbesondere folgende
+Rechte:
 </p>
 
 <ul>
-<li>Recht auf Auskunft über deine personenbezogenen Daten</li>
-<li>Recht auf Berichtigung unrichtiger Daten</li>
-<li>Recht auf Löschung deiner Daten</li>
-<li>Recht auf Einschränkung der Verarbeitung</li>
-<li>Recht auf Widerspruch gegen bestimmte Verarbeitungen</li>
-<li>Recht auf Datenübertragbarkeit, soweit die gesetzlichen Voraussetzungen erfüllt sind</li>
+  <li>Recht auf Auskunft über deine personenbezogenen Daten</li>
+  <li>Recht auf Berichtigung unrichtiger Daten</li>
+  <li>Recht auf Löschung deiner Daten</li>
+  <li>Recht auf Einschränkung der Verarbeitung</li>
+  <li>Recht auf Datenübertragbarkeit</li>
+  <li>Recht auf Widerspruch gegen bestimmte Verarbeitungen</li>
 </ul>
 
 <p>
+Soweit eine Verarbeitung auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO erfolgt,
+kannst du aus Gründen, die sich aus deiner besonderen Situation ergeben,
+Widerspruch gegen diese Verarbeitung einlegen.
+</p>
+
+<p>
 Du hast außerdem das Recht, dich bei einer zuständigen
-Datenschutzaufsichtsbehörde zu beschweren, wenn du der Ansicht bist,
-dass deine personenbezogenen Daten rechtswidrig verarbeitet werden.
+Datenschutzaufsichtsbehörde zu beschweren.
 </p>
 
-<h2>11. Automatisierte Entscheidungen</h2>
+<h2>13. Automatisierte Entscheidungen</h2>
 
 <p>
-DaheimSmart verwendet derzeit keine automatisierte Entscheidungsfindung
-oder Profiling-Verfahren, die rechtliche Wirkung entfalten oder dich
-in vergleichbarer Weise erheblich beeinträchtigen.
+DaheimSmart verwendet derzeit keine automatisierte Entscheidungsfindung und
+kein Profiling, das rechtliche Wirkung entfaltet oder dich in ähnlicher Weise
+erheblich beeinträchtigt.
 </p>
 
-<h2>12. Aktualisierung dieser Datenschutzerklärung</h2>
+<h2>14. Aktualisierung dieser Datenschutzerklärung</h2>
 
 <p>
-Diese Datenschutzerklärung kann angepasst werden, wenn sich die
-technischen Funktionen, die angebotenen Dienste oder der rechtliche
-und geschäftliche Status von DaheimSmart ändern.
+Diese Datenschutzerklärung kann angepasst werden, wenn sich die Website,
+ihre technischen Funktionen, eingesetzte Dienste oder die gesetzlichen
+Anforderungen ändern.
 </p>
 
-<div class="note">
-Stand: 2026<br>
-Diese Datenschutzerklärung beschreibt den derzeitigen technischen
-und organisatorischen Stand von DaheimSmart. Bei einer späteren
-geschäftlichen oder kommerziellen Nutzung sollte die Erklärung
-erneut rechtlich geprüft und an die tatsächlichen Dienste angepasst werden.
-</div>
+<p>
+Die jeweils aktuelle Version wird auf dieser Seite veröffentlicht.
+</p>
 
-</div>
-
+</article>
 </main>
+
+<footer>
+  <strong>DaheimSmart</strong><br>
+  Smarte Technik. Einfach erklärt.<br><br>
+  Messen statt raten.<br><br>
+
+  <a href="index.html">Startseite</a><br>
+  <a href="impressum.html">Impressum</a><br>
+  <a href="datenschutz.html">Datenschutz</a>
+</footer>
 
 </body>
 </html>
