@@ -2,44 +2,65 @@
 
 **Smarte Technik. Einfach erklärt.**
 
-DaheimSmart zeigt, was Smart-Home-Technik im Alltag wirklich bringt – verständlich, praktisch und ohne Technik-Hype.
+DaheimSmart ist eine unabhängige, verständlich aufgebaute Plattform rund um Smart-Home-Technik, Energie, Sicherheit und Komfort.
+
+Das Ziel: Menschen sollen technische Lösungen besser verstehen und fundierte Entscheidungen treffen können – **ohne Technik-Hype und ohne unnötige Kaufempfehlungen**.
 
 ## Unser Prinzip
 
 **Messen statt raten.**
 
-Erst den konkreten Nutzen sichtbar machen, dann die Technik erklären und erst danach über einen Kauf entscheiden.
+Die zentrale Vorgehensweise von DaheimSmart:
 
-## Was DaheimSmart bietet
+**Problem → Ziel → Lösung → Technologie → Daten → Kriterien → Vergleich → Entscheidung**
 
-- ⚡ **Energie:** Verbrauch und Kosten nachvollziehbar berechnen
+Erst wird das konkrete Problem verstanden. Danach wird erklärt, welche Lösung sinnvoll sein kann. Erst am Ende kommen konkrete Produkte oder Kaufmöglichkeiten ins Spiel.
+
+## Was DaheimSmart aktuell bietet
+
+- ⚡ **Energie:** Verbrauch und Stromkosten verständlich betrachten
 - 🔐 **Sicherheit:** Sensoren, Benachrichtigungen und praktische Lösungen
-- 🏠 **Komfort:** Automationen für Licht, Heizung und Alltag
-- 💶 **Kosten:** Preis, Verbrauch und Nutzen gemeinsam betrachten
-- 🔎 **Ratgeber:** Technik einfach erklären und sinnvoll vergleichen
+- 🏠 **Komfort:** Automationen und Smart-Home-Lösungen für den Alltag
+- 💶 **Kosten:** Anschaffung, Verbrauch und Nutzen gemeinsam betrachten
+- 🔎 **Vergleiche:** technische Unterschiede anhand nachvollziehbarer Kriterien
+- 📚 **Ratgeber:** Smart-Home-Technik einfach und praxisnah erklärt
+- 🧮 **Stromkosten-Rechner:** interaktive Berechnung direkt im Browser
+- 📊 **Produktvergleich:** interaktiver Vergleich verschiedener Geräte
 
-## Aktueller Stand
+## Aktueller Projektstand
 
-Die Website ist eine schlanke statische Webanwendung und wird über GitHub Pages veröffentlicht.
+DaheimSmart befindet sich aktuell in der Phase eines **funktionalen statischen Web-Prototyps**.
 
-Aktuell enthalten:
+Die technische Basis steht und die wichtigsten Inhalte und Werkzeuge sind bereits integriert.
+
+Aktuell vorhanden:
 
 - responsive Startseite
-- Hero-Bild für DaheimSmart
+- DaheimSmart-Hero-Bild
 - Bereiche für Energie, Sicherheit, Komfort und Kosten
+- Lösungswege vom Problem zur passenden Technologie
+- Erklärungen zu Smart-Home-Technologien
+- Kriterien für die Geräteauswahl
+- Ratgeberartikel
 - interaktiver Stromkosten-Rechner
-- interaktiver Vergleich von zwei Geräten
+- interaktiver Produktvergleich
+- realer Produktvergleich mit Herstellerangaben
+- Impressum
+- Datenschutzerklärung
 - barrierearmer „Zum Inhalt springen“-Link
 - automatische Veröffentlichung über GitHub Actions
 
 ## Technischer Aufbau
 
+DaheimSmart ist derzeit eine schlanke statische Website auf Basis von HTML, CSS und JavaScript.
+
 ```text
 DaheimSmart/
 ├── index.html
+├── impressum.html
+├── datenschutz.html
 ├── daheimsmart-house-hero.png
 ├── README.md
 └── .github/
     └── workflows/
         └── static.yml
-```
