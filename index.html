@@ -3,1626 +3,250 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="DaheimSmart – smarte Technik für dein Zuhause. Einfach erklärt, ehrlich verglichen und mit praktischen Tipps.">
+<meta name="description" content="DaheimSmart – smarte Technik für dein Zuhause. Einfach erklärt, nachvollziehbar verglichen und mit praktischen Werkzeugen.">
 <title>DaheimSmart – Smarte Technik. Einfach erklärt.</title>
 <style>
-*{box-sizing:border-box;margin:0;padding:0}body{font-family:Arial,sans-serif;background:#f5f7f5;color:#17201a;line-height:1.6}
-header{background:#102019;color:white;padding:18px 6%;display:flex;justify-content:space-between;align-items:center}.logo{font-size:1.35rem;font-weight:700}nav a{color:white;text-decoration:none;margin-left:20px;font-size:.95rem}
-.hero{background:#102019;color:white;padding:55px 6% 65px;display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}.hero h1{font-size:clamp(2.2rem,5vw,4rem);line-height:1.08;margin:15px 0}.hero p{font-size:1.08rem;max-width:600px;color:#dce7df}.eyebrow{color:#8fd19e;text-transform:uppercase;font-size:.78rem;font-weight:700;letter-spacing:1.5px}.hero img{width:100%;border-radius:22px;display:block}
-.btn{display:inline-block;margin-top:20px;background:#8fd19e;color:#102019;padding:11px 17px;border-radius:10px;text-decoration:none;font-weight:700}.trust{
-  padding:22px 6%;
-  background:white;
-  text-align:center;
-}
-
-.trust strong{
-  display:block;
-  color:#244d32;
-  font-size:1.15rem;
-  margin-bottom:4px;
-}
-
-.trust span{
-  display:block;
-  color:#5a665e;
-  font-size:.95rem;
-}
-.section{padding:60px 6%;max-width:1200px;margin:auto}.section h2{text-align:center;font-size:2rem;margin:8px 0 12px}.lead{text-align:center;max-width:760px;margin:0 auto 35px;color:#5a665e}
-.solution-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.solution-card{background:white;border:1px solid #e1e8e2;border-radius:16px;padding:22px;box-shadow:0 5px 18px #1020190b}.solution-card h3{margin:8px 0}.solution-card p{color:#5a665e;font-size:.94rem}.solution-icon{font-size:2rem}.metric{font-size:1.2rem;font-weight:700;margin:15px 0;color:#244d32}.visual-row{font-weight:700;margin:14px 0}.proof-strip{margin-top:25px;background:#e9f4eb;border-radius:14px;padding:18px;text-align:center;font-weight:700}
-.calculator{background:#102019;color:white;border-radius:22px;padding:30px;max-width:850px;margin:35px auto 0}.calculator h3{font-size:1.7rem;margin-bottom:8px}.calc-intro{color:#dce7df;margin-bottom:22px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}label{display:block;font-size:.9rem;font-weight:700;margin-bottom:6px}input{width:100%;padding:12px;border:0;border-radius:9px;font-size:1rem}
-.result{margin-top:22px;background:#fff;color:#17201a;border-radius:14px;padding:20px}.result-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:12px;
-  text-align:center;
-}.result strong{display:block;font-size:1.45rem;color:#244d32}.formula{margin-top:18px;font-size:.85rem;color:#68756c}.notice{margin-top:15px;font-size:.85rem;color:#dce7df}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.info-card{background:white;padding:24px;border-radius:16px;border:1px solid #e1e8e2}footer{background:#102019;color:#dce7df;text-align:center;padding:35px 6%;margin-top:20px}
-@media(max-width:800px){header{padding:15px 5%}nav a{margin-left:10px;font-size:.85rem}.hero{grid-template-columns:1fr;padding:40px 5% 50px}.section{padding:45px 5%}.solution-grid,.cards{grid-template-columns:1fr}.form-grid,.result-grid{grid-template-columns:1fr}}
-  
-
-.skip-link{
-position:absolute;
-left:-9999px;
-top:10px;
-z-index:100;
-background:#8fd19e;
-color:#102019;
-padding:10px 14px;
-border-radius:10px;
-font-weight:800;
-text-decoration:none;
-}
-
-.skip-link:focus{
-left:10px;
-}
-
-a:focus-visible{
-outline:3px solid #8fd19e;
-outline-offset:3px;
-}
-.card-result{
-  margin:18px 0;
-  padding:14px;
-  background:#e9f4eb;
-  border-left:4px solid #8fd19e;
-  border-radius:12px;
-}
-
-.card-result strong{
-  display:block;
-  color:#244d32;
-  font-size:1.05rem;
-}
-
-.card-result span{
-  display:block;
-  margin-top:4px;
-  color:#5a665e;
-  font-size:.9rem;
-}
-.compare-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:15px;
-}
-@media(max-width:800px){
-  .compare-grid{
-    grid-template-columns:1fr;
-  }
-}
-.compare-heading{
-  margin-top:0;
-  color:#244d32;
-}
-
-.compare-table{
-  display:grid;
-  grid-template-columns:minmax(0,1.2fr) minmax(0,1fr) minmax(0,1fr);
-  width:100%;
-  gap:1px;
-  background:#dfe8e1;
-  border-radius:12px;
-  overflow:hidden;
-  margin-top:18px;
-}
-
-.compare-table>div{
-  background:white;
-  padding:12px;
-  min-width:0;
-  overflow-wrap:anywhere;
-
-}
-
-.compare-highlight{
-  margin-top:15px;
-  background:#e9f4eb;
-  color:#17201a;
-  border-radius:12px;
-  padding:14px;
-}
-
-.compare-highlight span{
-  display:block;
-  color:#5a665e;
-  font-size:.9rem;
-}
-
-.compare-highlight strong{
-  display:block;
-  color:#244d32;
-  font-size:1.2rem;
-  margin-bottom:8px;
-}
-
-.compare-message{
-  margin-top:12px;
-  color:#5a665e;
-  font-weight:700;
-}
-.decision-box{
-  margin-top:32px;
-  padding:28px;
-  background:#f0f6f1;
-  border:1px solid #dfe9e1;
-  border-radius:18px;
-}
-
-.decision-intro{
-  text-align:center;
-  max-width:700px;
-  margin:0 auto 22px;
-}
-
-.decision-intro h2{
-  margin:8px 0;
-}
-
-.decision-intro p{
-  color:#5a665e;
-  margin:0;
-}
-
-.decision-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:16px;
-}
-
-.decision-card{
-  display:block;
-  background:white;
-  border:1px solid #e1e8e2;
-  border-radius:15px;
-  padding:20px;
-  text-decoration:none;
-  color:#17201a;
-  transition:transform .2s,box-shadow .2s;
-}
-
-.decision-card:hover{
-  transform:translateY(-3px);
-  box-shadow:0 8px 22px #10201912;
-}
-
-.decision-icon{
-  display:block;
-  font-size:2rem;
-  margin-bottom:10px;
-}
-
-.decision-card strong{
-  display:block;
-  font-size:1.1rem;
-  color:#244d32;
-  margin-bottom:7px;
-}
-
-.decision-card>span:not(.decision-icon):not(.decision-link){
-  display:block;
-  color:#5a665e;
-  font-size:.92rem;
-}
-
-.decision-link{
-  display:block;
-  margin-top:15px;
-  color:#2f7042;
-  font-weight:700;
-}
-
-@media(max-width:800px){
-  .decision-grid{
-    grid-template-columns:1fr;
-  }
-}
-.solution-paths{
-  margin-top:32px;
-  padding:28px;
-  background:#102019;
-  border-radius:18px;
-  color:white;
-}
-
-.solution-paths .eyebrow{
-  text-align:center;
-}
-
-.solution-paths h2{
-  color:white;
-  margin:8px 0 10px;
-}
-
-.solution-paths .lead{
-  color:#dce7df;
-  margin-bottom:24px;
-}
-
-.solution-path-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:16px;
-}
-
-.solution-path-card{
-  display:block;
-  background:white;
-  color:#17201a;
-  padding:20px;
-  border-radius:15px;
-  text-decoration:none;
-  border:1px solid #e1e8e2;
-  transition:transform .2s,box-shadow .2s;
-}
-
-.solution-path-card:hover{
-  transform:translateY(-3px);
-  box-shadow:0 8px 22px #00000020;
-}
-
-.solution-path-icon{
-  display:block;
-  font-size:2rem;
-  margin-bottom:10px;
-}
-
-.solution-path-card strong{
-  display:block;
-  color:#244d32;
-  font-size:1.1rem;
-  margin-bottom:7px;
-}
-
-.solution-path-card span:not(.solution-path-icon){
-  display:block;
-  color:#5a665e;
-  font-size:.92rem;
-}
-
-.solution-path-link{
-  margin-top:15px;
-  color:#2f7042 !important;
-  font-weight:700;
-}
-
-@media(max-width:800px){
-  .solution-path-grid{
-    grid-template-columns:1fr;
-  }
-}
-.tech-help{
-  margin-top:32px;
-  padding:28px;
-  background:#f0f6f1;
-  border:1px solid #dfe9e1;
-  border-radius:18px;
-}
-
-.tech-help .eyebrow{
-  text-align:center;
-}
-
-.tech-help h2{
-  text-align:center;
-  margin:8px 0 10px;
-}
-
-.tech-help .lead{
-  margin-bottom:24px;
-}
-
-.tech-help-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:16px;
-}
-
-.tech-help-card{
-  background:white;
-  border:1px solid #e1e8e2;
-  border-radius:15px;
-  padding:20px;
-}
-
-.tech-help-icon{
-  font-size:2rem;
-  display:block;
-  margin-bottom:10px;
-}
-
-.tech-help-card strong{
-  display:block;
-  color:#244d32;
-  font-size:1.05rem;
-  margin-bottom:8px;
-}
-
-.tech-help-card p{
-  color:#5a665e;
-  font-size:.92rem;
-}
-
-@media(max-width:800px){
-  .tech-help-grid{
-    grid-template-columns:1fr;
-  }
-}
-.tech-types {
-  margin-top: 2rem;
-}
-
-.tech-types-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.2rem;
-  margin-top: 1.5rem;
-}
-
-.tech-type-card {
-  background: #ffffff;
-  border: 1px solid #dce5de;
-  border-radius: 18px;
-  padding: 1.4rem;
-  box-shadow: 0 8px 24px rgba(23, 32, 26, 0.06);
-}
-
-.tech-type-icon {
-  font-size: 2rem;
-  margin-bottom: 0.7rem;
-}
-
-.tech-type-card h3 {
-  margin: 0 0 0.6rem;
-}
-
-.tech-type-card p {
-  margin: 0;
-  line-height: 1.6;
-}
-
-.tech-type-use {
-  margin-top: 1rem;
-  padding-top: 0.9rem;
-  border-top: 1px solid #e5ebe6;
-  font-size: 0.95rem;
-  color: #3e4d43;
-}
-
-@media (max-width: 800px) {
-  .tech-types-grid {
-    grid-template-columns: 1fr;
-  }
-}
-.device-types {
-  margin-top: 2rem;
-  padding: 28px;
-  background: #102019;
-  border-radius: 18px;
-  color: white;
-}
-
-.device-types .eyebrow {
-  text-align: center;
-}
-
-.device-types h2 {
-  text-align: center;
-  color: white;
-  margin: 8px 0 10px;
-}
-
-.device-types-intro {
-  text-align: center;
-  max-width: 720px;
-  margin: 0 auto 24px;
-  color: #dce7df;
-}
-
-.device-types-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-}
-
-.device-type-card {
-  background: white;
-  color: #17201a;
-  border-radius: 15px;
-  padding: 20px;
-  border: 1px solid #e1e8e2;
-}
-
-.device-type-icon {
-  display: block;
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
-
-.device-type-card strong {
-  display: block;
-  color: #244d32;
-  font-size: 1.1rem;
-  margin-bottom: 8px;
-}
-
-.device-type-card p {
-  color: #5a665e;
-  font-size: .92rem;
-  margin: 0;
-}
-
-.device-type-example {
-  margin-top: 14px;
-  padding-top: 12px;
-  border-top: 1px solid #e1e8e2;
-  color: #3e4d43;
-  font-size: .9rem;
-}
-
-.device-type-example strong {
-  display: inline;
-  color: #244d32;
-  font-size: .9rem;
-}
-
-@media(max-width:800px) {
-  .device-types-grid {
-    grid-template-columns: 1fr;
-  }
-}
-.device-criteria {
-  margin-top: 2rem;
-  padding: 28px;
-  background: #f0f6f1;
-  border: 1px solid #dfe9e1;
-  border-radius: 18px;
-}
-
-.device-criteria .eyebrow {
-  text-align: center;
-}
-
-.device-criteria h2 {
-  text-align: center;
-  margin: 8px 0 10px;
-}
-
-.device-criteria-intro {
-  text-align: center;
-  max-width: 720px;
-  margin: 0 auto 24px;
-  color: #5a665e;
-}
-
-.device-criteria-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-}
-
-.device-criteria-card {
-  background: white;
-  border: 1px solid #e1e8e2;
-  border-radius: 15px;
-  padding: 20px;
-}
-
-.device-criteria-icon {
-  display: block;
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
-
-.device-criteria-card strong {
-  display: block;
-  color: #244d32;
-  font-size: 1.05rem;
-  margin-bottom: 7px;
-}
-
-.device-criteria-card p {
-  color: #5a665e;
-  font-size: .92rem;
-  margin: 0;
-}
-
-.device-criteria-question {
-  margin-top: 12px;
-  padding-top: 10px;
-  border-top: 1px solid #e1e8e2;
-  color: #3e4d43;
-  font-size: .88rem;
-  font-weight: 700;
-}
-.device-comparison {
-  margin-top: 2rem;
-  padding: 28px;
-  background: #102019;
-  border-radius: 18px;
-  color: white;
-}
-
-.device-comparison .eyebrow {
-  text-align: center;
-}
-
-.device-comparison h2 {
-  text-align: center;
-  color: white;
-  margin: 8px 0 10px;
-}
-
-.device-comparison-intro {
-  text-align: center;
-  max-width: 720px;
-  margin: 0 auto 24px;
-  color: #dce7df;
-}
-
-.comparison-table {
-  display: grid;
-  grid-template-columns: minmax(0,1.4fr) minmax(0,1fr) minmax(0,1fr);
-  width: 100%;
-  gap: 1px;
-  background: #dfe8e1;
-  border-radius: 14px;
-  overflow: hidden;
-}
-
-.comparison-table > div {
-  background: white;
-  color: #17201a;
-  padding: 13px;
-  min-width: 0;
-  overflow-wrap: anywhere;
-}
-
-.comparison-head {
-  font-weight: 800;
-  color: #244d32 !important;
-}
-
-.comparison-check {
-  color: #2f7042;
-  font-weight: 800;
-}
-
-.comparison-note {
-  margin-top: 16px;
-  background: #e9f4eb;
-  color: #17201a;
-  border-radius: 12px;
-  padding: 15px;
-}
-
-.comparison-note strong {
-  display: block;
-  color: #244d32;
-  margin-bottom: 5px;
-}
-
-.comparison-note span {
-  color: #5a665e;
-  font-size: .9rem;
-}
-
-@media(max-width:800px) {
-  .comparison-table {
-    grid-template-columns: minmax(0,1.3fr) minmax(0,1fr) minmax(0,1fr);
-    font-size: .88rem;
-  }
-
-  .comparison-table > div {
-    padding: 10px;
-  }
-}
-@media(max-width:800px) {
-  .device-criteria-grid {
-    grid-template-columns: 1fr;
-  }
-}
-.comparison-sources{
-  margin-top:16px;
-  padding:15px;
-  background:#ffffff;
-  color:#17201a;
-  border:1px solid #dfe8e1;
-  border-radius:12px;
-  font-size:.88rem;
-}
-
-.comparison-sources strong{
-  color:#244d32;
-}
-
-.comparison-sources p{
-  margin:6px 0;
-  color:#5a665e;
-}
-
-.comparison-sources ul{
-  margin:10px 0 0 20px;
-}
-
-.comparison-sources li{
-  margin-bottom:6px;
-}
-
-.source-date{
-  font-size:.8rem;
-  margin-top:12px !important;
-}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,sans-serif;background:#f5f7f5;color:#17201a;line-height:1.6}
+a{color:inherit}
+header{position:sticky;top:0;z-index:20;background:#102019;color:#fff;padding:16px 6%;display:flex;justify-content:space-between;align-items:center;box-shadow:0 4px 18px #10201918}
+.logo{font-size:1.35rem;font-weight:800}
+nav a{color:#fff;text-decoration:none;margin-left:20px;font-size:.95rem}
+nav a:hover{color:#8fd19e}
+.skip-link{position:absolute;left:-9999px;top:10px;z-index:100;background:#8fd19e;color:#102019;padding:10px 14px;border-radius:10px;font-weight:800;text-decoration:none}
+.skip-link:focus{left:10px}
+a:focus-visible{outline:3px solid #8fd19e;outline-offset:3px}
+.hero{background:#102019;color:#fff;padding:58px 6% 68px;display:grid;grid-template-columns:1.05fr .95fr;gap:42px;align-items:center}
+.hero h1{font-size:clamp(2.35rem,5vw,4.5rem);line-height:1.04;margin:14px 0 18px;max-width:720px}
+.hero p{font-size:1.08rem;max-width:650px;color:#dce7df}
+.eyebrow{color:#8fd19e;text-transform:uppercase;font-size:.78rem;font-weight:800;letter-spacing:1.5px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:4px}
+.btn{display:inline-block;margin-top:20px;background:#8fd19e;color:#102019;padding:12px 18px;border-radius:10px;text-decoration:none;font-weight:800}
+.btn.secondary{background:#fff;color:#102019}
+.hero-trust{display:flex;flex-wrap:wrap;gap:14px;margin-top:20px;color:#dce7df;font-size:.9rem}
+.hero-trust span:before{content:"✓ ";color:#8fd19e;font-weight:800}
+.hero img{width:100%;border-radius:22px;display:block;box-shadow:0 18px 45px #00000030}
+.trust{padding:22px 6%;background:#fff;text-align:center;border-bottom:1px solid #e1e8e2}
+.trust strong{display:block;color:#244d32;font-size:1.15rem;margin-bottom:4px}
+.trust span{display:block;color:#5a665e;font-size:.95rem}
+.section{padding:64px 6%;max-width:1200px;margin:auto}
+.section h2{ text-align:center;font-size:clamp(1.8rem,3vw,2.35rem);margin:8px 0 12px}
+.lead{text-align:center;max-width:760px;margin:0 auto 35px;color:#5a665e}
+.problem-grid,.journey-grid,.tool-grid,.trust-grid,.cards{display:grid;gap:18px}
+.problem-grid{grid-template-columns:repeat(4,1fr)}
+.problem-card,.tool-card,.trust-card,.info-card{background:#fff;border:1px solid #e1e8e2;border-radius:17px;padding:22px;box-shadow:0 5px 18px #1020190b}
+.problem-card,.tool-card{ text-decoration:none;transition:transform .2s,box-shadow .2s}
+.problem-card:hover,.tool-card:hover{transform:translateY(-3px);box-shadow:0 10px 25px #10201912}
+.card-icon,.tool-icon{font-size:2.2rem;display:block;margin-bottom:10px}
+.problem-card h3,.tool-card h3,.trust-card h3,.info-card h3{color:#244d32;margin-bottom:8px}
+.problem-card p,.tool-card p,.trust-card p,.info-card p{color:#5a665e;font-size:.93rem}
+.card-link{display:block;margin-top:15px;color:#2f7042;font-weight:800}
+.journey{background:#102019;color:#fff;max-width:none}
+.journey h2{color:#fff}
+.journey .lead{color:#dce7df}
+.journey-grid{grid-template-columns:repeat(5,1fr);max-width:1100px;margin:auto}
+.journey-step{background:#fff;color:#17201a;border-radius:16px;padding:20px;text-align:center}
+.journey-number{display:inline-flex;width:38px;height:38px;align-items:center;justify-content:center;border-radius:50%;background:#8fd19e;color:#102019;font-weight:900;margin-bottom:10px}
+.journey-step strong{display:block;color:#244d32;margin-bottom:7px}
+.journey-step span{display:block;color:#5a665e;font-size:.9rem}
+.journey-principle{max-width:850px;margin:28px auto 0;text-align:center;color:#dce7df;font-weight:800}
+.tool-section{background:#f0f6f1;max-width:none}
+.tool-grid{grid-template-columns:repeat(3,1fr);max-width:1050px;margin:auto}
+.tool-card.featured{border-color:#8fd19e;box-shadow:0 10px 30px #244d3214}
+.calculator{background:#102019;color:#fff;border-radius:22px;padding:30px;max-width:850px;margin:25px auto 0}
+.calculator h3{font-size:1.7rem;margin-bottom:8px}
+.calc-intro{color:#dce7df;margin-bottom:22px}
+.form-grid,.compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+label{display:block;font-size:.9rem;font-weight:700;margin-bottom:6px}
+input{width:100%;padding:12px;border:0;border-radius:9px;font-size:1rem}
+.result{margin-top:22px;background:#fff;color:#17201a;border-radius:14px;padding:20px}
+.result-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;text-align:center}
+.result strong{display:block;font-size:1.45rem;color:#244d32}
+.formula{margin-top:18px;font-size:.85rem;color:#68756c}
+.notice{margin-top:15px;font-size:.85rem;color:#dce7df}
+.compare-table,.comparison-table{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr) minmax(0,1fr);width:100%;gap:1px;background:#dfe8e1;border-radius:12px;overflow:hidden;margin-top:18px}
+.compare-table>div,.comparison-table>div{background:#fff;color:#17201a;padding:12px;min-width:0;overflow-wrap:anywhere}
+.compare-heading,.comparison-head{font-weight:800;color:#244d32}
+.compare-highlight{margin-top:15px;background:#e9f4eb;color:#17201a;border-radius:14px;padding:15px}
+.compare-highlight strong{display:block;color:#244d32;font-size:1.2rem;margin-bottom:7px}
+.compare-message{margin-top:12px;color:#5a665e;font-weight:700}
+.trust-grid{grid-template-columns:repeat(3,1fr);max-width:1050px;margin:auto}
+.trust-card .card-icon{font-size:2rem}
+.trust-evidence{max-width:900px;margin:25px auto 0;background:#e9f4eb;border-radius:15px;padding:18px;text-align:center}
+.trust-evidence strong{color:#244d32}
+.comparison-wrap{background:#102019;color:#fff;border-radius:20px;padding:28px;margin-top:25px}
+.comparison-wrap h3{text-align:center;color:#fff;margin:8px 0}
+.comparison-wrap .lead{color:#dce7df}
+.comparison-check{color:#2f7042;font-weight:800}
+.comparison-note{margin-top:15px;background:#e9f4eb;color:#17201a;border-radius:12px;padding:15px}
+.comparison-note strong{display:block;color:#244d32;margin-bottom:5px}
+.comparison-note span{color:#5a665e;font-size:.9rem}
+.comparison-sources{margin-top:15px;padding:15px;background:#fff;color:#17201a;border:1px solid #dfe8e1;border-radius:12px;font-size:.88rem}
+.comparison-sources strong{color:#244d32}
+.comparison-sources p{margin:6px 0;color:#5a665e}
+.comparison-sources ul{margin:10px 0 0 20px}
+.source-date{font-size:.8rem!important}
+.ratgeber-grid{grid-template-columns:repeat(3,1fr)}
+.card-result{margin:15px 0;padding:12px;background:#e9f4eb;border-left:4px solid #8fd19e;border-radius:10px}
+.card-result strong{display:block;color:#244d32;font-size:1rem}
+.card-result span{display:block;margin-top:3px;color:#5a665e;font-size:.88rem}
+.cta{background:#102019;color:#fff;max-width:none;text-align:center;padding:68px 6%}
+.cta h2{color:#fff}
+.cta p{max-width:700px;margin:0 auto;color:#dce7df}
+footer{background:#0b1712;color:#dce7df;text-align:center;padding:35px 6%}
+footer a{color:#8fd19e}
+@media(max-width:900px){.problem-grid{grid-template-columns:repeat(2,1fr)}.journey-grid{grid-template-columns:repeat(2,1fr)}.journey-step:last-child{grid-column:1/-1}.tool-grid,.trust-grid,.ratgeber-grid{grid-template-columns:1fr}}
+@media(max-width:800px){header{padding:15px 5%}.hero{grid-template-columns:1fr;padding:42px 5% 52px}.section{padding:48px 5%}.problem-grid,.journey-grid,.tool-grid,.trust-grid,.ratgeber-grid,.form-grid,.result-grid,.compare-grid{grid-template-columns:1fr}.journey-step:last-child{grid-column:auto}.comparison-table{font-size:.84rem}.comparison-table>div{padding:9px}.hero-actions,.hero-trust{flex-direction:column;align-items:flex-start}}
 </style>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Zum Inhalt springen</a>
-<header><div class="logo">DaheimSmart</div><nav><a href="#loesungen">Lösungen</a><a href="#rechner">Rechner</a><a href="#ratgeber">Ratgeber</a></nav></header>
+<header><div class="logo">DaheimSmart</div><nav><a href="#loesungen">Lösungen</a><a href="#werkzeuge">Werkzeuge</a><a href="#ratgeber">Ratgeber</a></nav></header>
 <main id="main-content">
-<section class="hero"><div><div class="eyebrow">Smarte Technik. Einfach erklärt.</div><h1>Sieh, was Smart Home wirklich für dein Zuhause bringt.</h1><p>Von Energie und Sicherheit bis Komfort und Kosten: Wir zeigen dir konkrete Lösungen, verständlich erklärt und mit messbaren Ergebnissen.</p><a class="btn" href="#loesungen">Lösungen entdecken →</a></div><img src="daheimsmart-house-hero.png" alt="Modernes futuristisches Smart Home bei Abendlicht mit Solaranlage, intelligenter Beleuchtung und Energiemanagement"></section>
-<div class="trust">
-  <strong>Was bringt es dir?</strong>
-  <span>Energie sparen · Sicherheit erhöhen · Komfort gewinnen · Kosten verstehen</span>
-</div> 
-<section class="section" id="loesungen"><div class="eyebrow" style="text-align:center">Sehen. Verstehen. Entscheiden.</div><h2>4 Dinge, die dein Zuhause besser machen können</h2><p class="lead">Keine langen Versprechen. Wir zeigen dir konkrete Anwendungen, nachvollziehbare Werte und einfache Lösungen.</p>
-<div class="solution-grid">
 
-<article class="solution-card">
-  <div class="solution-icon">⚡</div>
-  <h3>Energie</h3>
-  <div class="metric">Was kostet dich dein Gerät?</div>
-
-  <div class="card-result">
-    <strong>100 W</strong>
-    <span>× 4 Stunden täglich</span>
-  </div>
-
-  <div class="visual-row">⚡ 12 kWh / Monat</div>
-
-  <div class="card-result">
-    <strong>≈ 4,20 € / Monat</strong>
-    <span>Beispiel bei 0,35 €/kWh</span>
-  </div>
-
-  <p>Sieh sofort, wie sich Leistung und Nutzung auf deine Stromkosten auswirken.</p>
-
-  <a class="btn" href="#rechner">Eigenen Verbrauch berechnen</a>
-</article>
-
-
-<article class="solution-card">
-  <div class="solution-icon">🔐</div>
-  <h3>Sicherheit</h3>
-  <div class="metric">Was passiert, wenn niemand zu Hause ist?</div>
-
-  <div class="card-result">
-    <strong>🚪 Tür geöffnet</strong>
-    <span>Ein Sensor erkennt das Ereignis.</span>
-  </div>
-
-  <div class="visual-row">🚪 → 📱 → 🔔</div>
-
-  <div class="card-result">
-    <strong>Benachrichtigung</strong>
-    <span>Du erfährst sofort, was passiert.</span>
-  </div>
-
-  <p>Smart Home kann wichtige Ereignisse erkennen und dich informieren.</p>
-
-  <a class="btn" href="#ratgeber">Sicherheit entdecken</a>
-</article>
-
-
-<article class="solution-card">
-  <div class="solution-icon">🏠</div>
-  <h3>Komfort</h3>
-  <div class="metric">Weniger daran denken. Mehr genießen.</div>
-
-  <div class="card-result">
-    <strong>Du kommst nach Hause</strong>
-    <span>Eine Situation löst automatisch Aktionen aus.</span>
-  </div>
-
-  <div class="visual-row">🚪 → 💡 → 🌡️</div>
-
-  <div class="card-result">
-    <strong>Mehrere Aktionen</strong>
-    <span>Licht und andere Geräte reagieren automatisch.</span>
-  </div>
-
-  <p>Starte mit einer einfachen Automation, die du jeden Tag nutzen kannst.</p>
-
-  <a class="btn" href="#ratgeber">Komfort entdecken</a>
-</article>
-
-
-<article class="solution-card">
-  <div class="solution-icon">💶</div>
-  <h3>Kosten</h3>
-  <div class="metric">Was kostet ein Gerät wirklich?</div>
-
-  <div class="card-result">
-    <strong>💶 Kaufpreis</strong>
-    <span>Was zahlst du heute?</span>
-  </div>
-
-  <div class="visual-row">＋ ⚡ Verbrauch ＋ 🔧 Zubehör</div>
-
-  <div class="card-result">
-    <strong>Gesamtkosten</strong>
-    <span>Preis + Verbrauch + weitere Kosten</span>
-  </div>
-
-  <p>Vergleiche nicht nur den Preis. Betrachte die Kosten über einen längeren Zeitraum.</p>
-
-  <a class="btn" href="#rechner">Kosten vergleichen</a>
-</article>
-</div>
-  <div class="decision-box">
-  <div class="decision-intro">
-    <span class="eyebrow">DaheimSmart hilft dir entscheiden</span>
-    <h2>Was möchtest du zu Hause verbessern?</h2>
-    <p>Wähle dein Ziel und entdecke eine passende Lösung.</p>
-  </div>
-
-  <div class="decision-grid">
-
-    <a class="decision-card" href="#rechner">
-      <span class="decision-icon">⚡</span>
-      <strong>Energie sparen</strong>
-      <span>Verbrauch und Kosten besser verstehen.</span>
-      <span class="decision-link">Zum Rechner →</span>
-    </a>
-
-    <a class="decision-card" href="#ratgeber">
-      <span class="decision-icon">🔐</span>
-      <strong>Sicherheit verbessern</strong>
-      <span>Wichtige Ereignisse erkennen und informiert bleiben.</span>
-      <span class="decision-link">Sicherheit entdecken →</span>
-    </a>
-
-    <a class="decision-card" href="#ratgeber">
-      <span class="decision-icon">🏠</span>
-      <strong>Mehr Komfort</strong>
-      <span>Alltagssituationen einfacher und smarter gestalten.</span>
-      <span class="decision-link">Komfort entdecken →</span>
-    </a>
-
-  </div>
-  
-  <div class="solution-paths">
-    <div class="eyebrow">Lösungen, die zu deinem Ziel passen</div>
-    <h2>Welche Lösung passt zu dir?</h2>
-    <p class="lead">
-      Entdecke einfache Smart-Home-Lösungen für dein konkretes Ziel.
-    </p>
-
-    <div class="solution-path-grid">
-
-      <a class="solution-path-card" href="#rechner">
-        <span class="solution-path-icon">⚡</span>
-        <strong>Energie besser verstehen</strong>
-        <span>Verbrauch messen, Kosten berechnen und Stromfresser erkennen.</span>
-        <span class="solution-path-link">Energie-Lösungen entdecken →</span>
-      </a>
-
-      <a class="solution-path-card" href="#ratgeber">
-        <span class="solution-path-icon">🔐</span>
-        <strong>Sicherheit erhöhen</strong>
-        <span>Sensoren, Benachrichtigungen und einfache Sicherheitslösungen verstehen.</span>
-        <span class="solution-path-link">Sicherheitslösungen entdecken →</span>
-      </a>
-
-      <a class="solution-path-card" href="#ratgeber">
-        <span class="solution-path-icon">🏠</span>
-        <strong>Mehr Komfort erleben</strong>
-        <span>Licht, Heizung und Alltag mit einfachen Automationen erleichtern.</span>
-        <span class="solution-path-link">Komfortlösungen entdecken →</span>
-      </a>
-
-    </div>
-  </div>
-  <div class="tech-help">
-    <div class="eyebrow">Technik verstehen</div>
-    <h2>Welche Technik kann dabei helfen?</h2>
-    <p class="lead">
-      Nicht jedes Zuhause braucht die gleiche Lösung.
-      Entscheidend ist, welches Problem du wirklich lösen möchtest.
-    </p>
-
-    <div class="tech-help-grid">
-
-      <article class="tech-help-card">
-        <span class="tech-help-icon">📊</span>
-        <strong>Energie messen</strong>
-        <p>
-          Energieverbrauch sichtbar machen und erkennen,
-          welche Geräte tatsächlich Strom verbrauchen.
-        </p>
-      </article>
-
-      <article class="tech-help-card">
-        <span class="tech-help-icon">🔔</span>
-        <strong>Ereignisse erkennen</strong>
-        <p>
-          Sensoren können Türen, Fenster oder Bewegungen erkennen
-          und dich über wichtige Ereignisse informieren.
-        </p>
-      </article>
-
-      <article class="tech-help-card">
-        <span class="tech-help-icon">⚙️</span>
-        <strong>Automatisieren</strong>
-        <p>
-          Licht, Heizung und andere Geräte können abhängig
-          von bestimmten Situationen automatisch reagieren.
-        </p>
-      </article>
-
-    </div>
-  </div>
-  <div class="tech-types">
-
-  <p class="eyebrow">Was ist das eigentlich?</p>
-
-  <h2>Welche Technik steckt dahinter?</h2>
-
-  <p>
-    Hinter jeder Smart-Home-Lösung steckt eine bestimmte Art von Technik.
-    Hier erklären wir sie einfach und ohne Fachbegriffe.
-  </p>
-
-  <div class="tech-types-grid">
-
-    <div class="tech-type-card">
-      <div class="tech-type-icon">📊</div>
-      <h3>Verbrauch messen</h3>
-      <p>
-        Eine smarte Steckdose oder ein Messgerät zeigt,
-        wie viel Strom ein Gerät tatsächlich verbraucht.
-      </p>
-      <div class="tech-type-use">
-        <strong>Beispiel:</strong> Du möchtest wissen,
-        wie viel deine Waschmaschine oder dein Fernseher kostet.
-      </div>
-    </div>
-
-    <div class="tech-type-card">
-      <div class="tech-type-icon">🔔</div>
-      <h3>Ereignisse erkennen</h3>
-      <p>
-        Sensoren erkennen zum Beispiel, ob eine Tür oder ein Fenster
-        geöffnet wurde oder ob Bewegung stattfindet.
-      </p>
-      <div class="tech-type-use">
-        <strong>Beispiel:</strong> Du möchtest eine Benachrichtigung
-        erhalten, wenn eine Tür geöffnet wird.
-      </div>
-    </div>
-
-    <div class="tech-type-card">
-      <div class="tech-type-icon">⚙️</div>
-      <h3>Automatisieren</h3>
-      <p>
-        Eine Smart-Home-Steuerung verbindet Geräte und kann
-        bestimmte Aktionen automatisch auslösen.
-      </p>
-      <div class="tech-type-use">
-        <strong>Beispiel:</strong> Beim Nachhausekommen geht das Licht
-        automatisch an.
-      </div>
-    </div>
-
-  </div>
-  </div>
-  <div class="device-types">
-
-  <div class="eyebrow">Welches Gerät brauche ich dafür?</div>
-
-  <h2>Welche Geräte können dabei helfen?</h2>
-
-  <p class="device-types-intro">
-    Jetzt wird es konkret: Je nach Ziel gibt es unterschiedliche Geräte.
-    Du musst nicht alles vernetzen – entscheidend ist die richtige Lösung für dein Problem.
-  </p>
-
-  <div class="device-types-grid">
-
-    <article class="device-type-card">
-      <span class="device-type-icon">⚡</span>
-
-      <strong>Energie messen</strong>
-
-      <p>
-        Smarte Steckdosen oder Energiemessgeräte können sichtbar machen,
-        wie viel Strom ein angeschlossenes Gerät verbraucht.
-      </p>
-
-      <div class="device-type-example">
-        <strong>Geeignet für:</strong>
-        Stromverbrauch verstehen und mögliche Stromfresser erkennen.
-      </div>
-    </article>
-
-
-    <article class="device-type-card">
-      <span class="device-type-icon">🔐</span>
-
-      <strong>Sicherheit erhöhen</strong>
-
-      <p>
-        Tür- und Fenstersensoren sowie Bewegungsmelder können erkennen,
-        wenn zu Hause etwas passiert.
-      </p>
-
-      <div class="device-type-example">
-        <strong>Geeignet für:</strong>
-        Benachrichtigungen erhalten und wichtige Ereignisse erkennen.
-      </div>
-    </article>
-
-
-    <article class="device-type-card">
-      <span class="device-type-icon">🏠</span>
-
-      <strong>Komfort verbessern</strong>
-
-      <p>
-        Smarte Lampen, Thermostate und andere kompatible Geräte
-        können bestimmte Abläufe im Alltag vereinfachen.
-      </p>
-
-      <div class="device-type-example">
-        <strong>Geeignet für:</strong>
-        Licht, Temperatur und andere Abläufe komfortabler gestalten.
-      </div>
-    </article>
-
-  </div>
-  </div>
-  <div class="device-criteria">
-
-  <div class="eyebrow">Vor dem Kauf prüfen</div>
-
-  <h2>Worauf solltest du achten?</h2>
-
-  <p class="device-criteria-intro">
-    Der günstigste Preis ist nicht automatisch die beste Lösung.
-    Vergleiche die Punkte, die für dein Zuhause wirklich wichtig sind.
-  </p>
-
-  <div class="device-criteria-grid">
-
-    <article class="device-criteria-card">
-      <span class="device-criteria-icon">🔌</span>
-      <strong>Kompatibilität</strong>
-      <p>
-        Funktioniert das Gerät mit deinem Smartphone und
-        deinem vorhandenen Smart-Home-System?
-      </p>
-      <div class="device-criteria-question">
-        Passt es zu meiner vorhandenen Technik?
-      </div>
-    </article>
-
-    <article class="device-criteria-card">
-      <span class="device-criteria-icon">📱</span>
-      <strong>Bedienung</strong>
-      <p>
-        Ist die Einrichtung einfach und kannst du das Gerät
-        problemlos im Alltag bedienen?
-      </p>
-      <div class="device-criteria-question">
-        Kann ich es ohne Technik-Frust nutzen?
-      </div>
-    </article>
-
-    <article class="device-criteria-card">
-      <span class="device-criteria-icon">🔐</span>
-      <strong>Sicherheit & Datenschutz</strong>
-      <p>
-        Welche Daten werden verarbeitet und wie wird das Gerät
-        geschützt und aktualisiert?
-      </p>
-      <div class="device-criteria-question">
-        Sind meine Daten ausreichend geschützt?
-      </div>
-    </article>
-
-    <article class="device-criteria-card">
-      <span class="device-criteria-icon">⚡</span>
-      <strong>Verbrauch</strong>
-      <p>
-        Auch ein smartes Gerät benötigt Energie.
-        Der eigene Verbrauch sollte zum Nutzen passen.
-      </p>
-      <div class="device-criteria-question">
-        Wie viel Strom benötigt das Gerät?
-      </div>
-    </article>
-
-    <article class="device-criteria-card">
-      <span class="device-criteria-icon">💶</span>
-      <strong>Gesamtkosten</strong>
-      <p>
-        Berücksichtige neben dem Kaufpreis auch Zubehör,
-        Energieverbrauch und mögliche weitere Kosten.
-      </p>
-      <div class="device-criteria-question">
-        Was kostet mich das Gerät langfristig?
-      </div>
-    </article>
-
-    <article class="device-criteria-card">
-      <span class="device-criteria-icon">🛠️</span>
-      <strong>Installation</strong>
-      <p>
-        Prüfe, ob du das Gerät selbst installieren kannst
-        oder zusätzliche Hilfe benötigst.
-      </p>
-      <div class="device-criteria-question">
-        Wie aufwendig ist die Einrichtung?
-      </div>
-    </article>
-
-  </div>
-  </div>
- <div class="device-comparison">
-
-  <div class="eyebrow">Vergleichen statt raten</div>
-
-  <h2>Was unterscheidet zwei Lösungen?</h2>
-
-  <p class="device-comparison-intro">
-    Zwei Geräte können dasselbe Problem lösen, aber unterschiedlich gut
-    zu deinem Zuhause passen. Vergleiche die wichtigsten Punkte,
-    bevor du dich entscheidest.
-  </p>
-
-  <div class="comparison-table">
-
-    <div class="comparison-head">Kriterium</div>
-    <div class="comparison-head">Tapo P110M</div>
-    <div class="comparison-head">FRITZ!Smart Energy 200</div>
-
-    <div>Problem</div>
-    <div>Energieverbrauch messen und Geräte schalten</div>
-    <div>Energieverbrauch messen und Geräte schalten</div>
-
-    <div>Technologie</div>
-    <div>WLAN + Matter</div>
-    <div>DECT ULE</div>
-
-    <div>Energieüberwachung</div>
-    <div class="comparison-check">✓ Ja</div>
-    <div class="comparison-check">✓ Ja</div>
-
-    <div>Kompatibilität</div>
-    <div>Matter, Apple Home, Alexa, Google Home</div>
-    <div>FRITZ!Box / FRITZ!Smart Home</div>
-
-    <div>Hub / Basis nötig</div>
-    <div>Bei Drittanbieter-Matter-Systemen ggf. Hub</div>
-    <div>Kompatible FRITZ!Box mit DECT-Basis erforderlich</div>
-
-    <div>Automatisierung</div>
-    <div>Zeitpläne, Auto-Off und weitere Automationen</div>
-    <div>Zeitpläne, Countdown, Astro und weitere Automationen</div>
-
-    <div>Zusätzliche Messwerte</div>
-    <div>Energieverbrauch und Kosten</div>
-    <div>Leistung, Spannung, Strom, Energie, Kosten und CO₂</div>
-
-    <div>Installation</div>
-    <div>🟢 Einfach</div>
-    <div>🟢 Einfach, wenn FRITZ!Box vorhanden</div>
-
-    <div>Maximale Last</div>
-    <div>16 A / 3680 W*</div>
-    <div>10 A / 2300 W</div>
-
-    <div>Eigener Verbrauch</div>
-    <div>Nicht in den geprüften Herstellerangaben gefunden</div>
-    <div>ca. 1,1 W max.; ca. 0,5 W Stand-by</div>
-
-    <div>Datensicherheit / Updates</div>
-    <div>WPA3, Sicherheitsfunktionen und Firmware-Updates</div>
-    <div>Automatische Updates und langfristige Produktpflege</div>
-
-    <div>Preis</div>
-    <div>Aktuellen Preis prüfen</div>
-    <div>29,99 € Herstellerpreis</div>
-
-    <div>Stärke</div>
-    <div>Flexible Integration über Matter</div>
-    <div>Sehr tiefe Integration ins FRITZ!-System</div>
-
-    <div>Einschränkung</div>
-    <div>Drittanbieter-Matter-System kann einen Hub benötigen</div>
-    <div>Ohne kompatible FRITZ!Box nicht sinnvoll nutzbar</div>
-
-    <div>Passt besonders zu</div>
-    <div>Haushalten mit unterschiedlichen Smart-Home-Plattformen</div>
-    <div>Haushalten mit FRITZ!Box</div>
-
-  </div>
-
-  <div class="comparison-note">
-    <strong>🏠 Welche Lösung passt zu dir?</strong>
-    <span>
-      Tapo P110M kann besonders interessant sein, wenn du Matter und
-      verschiedene Smart-Home-Plattformen nutzen möchtest. Der
-      FRITZ!Smart Energy 200 passt besonders gut, wenn dein Zuhause
-      bereits auf FRITZ!Box und FRITZ!Smart Home basiert.
-    </span>
-  </div>
-
-  <p class="comparison-note" style="margin-top:10px;font-size:.82rem;">
-    * TP-Link nennt 16 A / 3680 W für allgemeine bzw. ohmsche Lasten.
-    Für bestimmte Motorlasten gelten Einschränkungen. Technische Angaben
-    sollten vor dem Kauf mit den aktuellen Herstellerinformationen geprüft werden.
-  </p>
-<div class="comparison-sources">
-  <strong>📚 Quellen der Produktangaben</strong>
-
-  <p>
-    Die technischen Angaben dieser Vergleichstabelle basieren auf den
-    offiziellen Produktinformationen der Hersteller.
-  </p>
-
-  <ul>
-    <li>
-      <strong>Tapo P110M:</strong>
-      offizielle Produktseite von TP-Link Deutschland
-    </li>
-
-    <li>
-      <strong>FRITZ!Smart Energy 200:</strong>
-      offizielle Produktseite von FRITZ!
-    </li>
-  </ul>
-
-  <p class="source-date">
-    Stand der geprüften Angaben: 28.09.2026
-  </p>
-</div>
-
- </div>
-  </div><div class="proof-strip">Unser Prinzip: Messen statt raten. Erst der sichtbare Nutzen, dann die Erklärung.</div></section>
-  <section class="section" id="rechner"><div class="eyebrow" style="text-align:center">DaheimSmart Rechner</div><h2>Was kostet dein Gerät wirklich?</h2><p class="lead">Gib die Werte deines Geräts ein und berechne Stromverbrauch und Kosten. Das Ergebnis basiert auf deinen Angaben.</p>
-<div class="calculator"><h3>⚡ Stromkosten berechnen</h3><p class="calc-intro">Alle Werte sind veränderbar. Kein Login und keine Speicherung.</p>
-<div class="form-grid"><div><label for="power">Leistung des Geräts (Watt)</label><input id="power" type="number" min="0" step="1" value="100"></div><div><label for="hours">Stunden pro Tag</label><input id="hours" type="number" min="0" step="0.1" value="4"></div><div><label for="days">Tage pro Monat</label><input id="days" type="number" min="0" step="1" value="30"></div><div><label for="price">Strompreis (€/kWh)</label><input id="price" type="number" min="0" step="0.01" value="0.35"></div></div>
-<div class="result"><div class="result-grid"><div>Verbrauch / Monat<strong id="kwh">12,00 kWh</strong></div>
-<div>Kosten / Monat<strong id="monthly">4,20 €</strong></div>
-<div>Kosten / Jahr<strong id="yearly">50,40 €</strong></div>
-<div>Kosten / 5 Jahre<strong id="fiveyear">252,00 €</strong></div></div><div class="formula">Formel: Watt ÷ 1000 × Stunden pro Tag × Tage pro Monat = kWh/Monat.</div></div>
-<p class="notice">Hinweis: Rechnerische Näherung. Der tatsächliche Verbrauch kann je nach Gerät und Nutzung abweichen.</p></div>
-
-<div class="calculator">
-<h3>⚖️ Zwei Geräte vergleichen</h3>
-<p class="calc-intro">Vergleiche zwei Geräte und sieh, welches bei deinem Strompreis langfristig günstiger ist.</p>
-
-<div class="compare-grid">
-
+<section class="hero">
 <div>
-<h4>Gerät A</h4>
-<label for="deviceA">Name des Geräts</label>
-<input id="deviceA" type="text" value="Gerät A">
-
-<label for="powerA">Leistung (Watt)</label>
-<input id="powerA" type="number" min="0" step="1" value="100">
-
-<label for="hoursA">Stunden pro Tag</label>
-<input id="hoursA" type="number" min="0" step="0.1" value="4">
+<div class="eyebrow">DaheimSmart · Smarte Technik. Einfach erklärt.</div>
+<h1>Mach dein Zuhause smarter – ohne Technik-Frust.</h1>
+<p>Verstehe dein Zuhause, finde passende Lösungen und vergleiche Technik mit nachvollziehbaren Daten.</p>
+<div class="hero-actions"><a class="btn" href="#loesungen">Mein Problem finden →</a><a class="btn secondary" href="#rechner">Stromkosten berechnen</a></div>
+<div class="hero-trust"><span>Einfach erklärt</span><span>Messen statt raten</span><span>Transparente Quellen</span></div>
 </div>
-
-<div>
-<h4>Gerät B</h4>
-<label for="deviceB">Name des Geräts</label>
-<input id="deviceB" type="text" value="Gerät B">
-
-<label for="powerB">Leistung (Watt)</label>
-<input id="powerB" type="number" min="0" step="1" value="60">
-
-<label for="hoursB">Stunden pro Tag</label>
-<input id="hoursB" type="number" min="0" step="0.1" value="4">
-</div>
-
-</div>
-
-<div class="form-grid" style="margin-top:15px">
-<div>
-<label for="compareDays">Tage pro Monat</label>
-<input id="compareDays" type="number" min="0" step="1" value="30">
-</div>
-
-<div>
-<label for="comparePrice">Strompreis (€/kWh)</label>
-<input id="comparePrice" type="number" min="0" step="0.01" value="0.35">
-</div>
-</div>
-
-<div class="result">
-
-<div class="compare-table">
-<div class="compare-heading">Vergleich</div>
-<div class="compare-heading" id="compareLabelA">Gerät A</div>
-<div class="compare-heading" id="compareLabelB">Gerät B</div>
-
-<div>Verbrauch / Monat</div>
-<div id="compareKwhA">12,00 kWh</div>
-<div id="compareKwhB">7,20 kWh</div>
-
-<div>Kosten / Monat</div>
-<div id="compareMonthlyA">4,20 €</div>
-<div id="compareMonthlyB">2,52 €</div>
-
-<div>Kosten / Jahr</div>
-<div id="compareAnnualA">50,40 €</div>
-<div id="compareAnnualB">30,24 €</div>
-</div>
-
-<div class="compare-highlight">
-Unterschied / Jahr
-<strong id="compareDiffYear">20,16 €</strong>
-
-Unterschied / 5 Jahre
-<strong id="compareDiffFive">100,80 €</strong>
-
-<div id="compareMessage">Gerät B ist bei diesen Annahmen günstiger.</div>
-</div>
-
-</div>
-
-<p class="notice">Hinweis: Der Vergleich basiert auf deinen Angaben. Tatsächliche Kosten können je nach Nutzung und Verbrauch abweichen.</p>
-</div>
-
+<img src="daheimsmart-house-hero.png" alt="Modernes futuristisches Smart Home bei Abendlicht mit Solaranlage, intelligenter Beleuchtung und Energiemanagement">
 </section>
 
-<section class="section" id="verbrauch">
-  <div class="eyebrow" style="text-align:center">⚡ Verstehen statt raten</div>
+<div class="trust"><strong>Was möchtest du zu Hause verbessern?</strong><span>Starte mit deinem Problem – nicht mit einem Produkt.</span></div>
 
-  <h2>Was kostet ein Gerät wirklich?</h2>
+<section class="section" id="loesungen">
+<div class="eyebrow" style="text-align:center">01 · Problem</div>
+<h2>Was möchtest du zu Hause verbessern?</h2>
+<p class="lead">Jeder Haushalt ist anders. Starte mit deinem Problem – DaheimSmart zeigt dir passende Lösungen, Technologien und Möglichkeiten.</p>
+<div class="problem-grid">
+<a class="problem-card" href="#rechner"><span class="card-icon">⚡</span><h3>Energie</h3><p>Stromverbrauch verstehen und erkennen, wo Kosten entstehen.</p><span class="card-link">Energie verstehen →</span></a>
+<a class="problem-card" href="#ratgeber"><span class="card-icon">🛡️</span><h3>Sicherheit</h3><p>Wichtige Ereignisse erkennen und dein Zuhause besser schützen.</p><span class="card-link">Sicherheit entdecken →</span></a>
+<a class="problem-card" href="#ratgeber"><span class="card-icon">🏠</span><h3>Komfort</h3><p>Wiederkehrende Aufgaben einfacher und smarter gestalten.</p><span class="card-link">Komfort entdecken →</span></a>
+<a class="problem-card" href="#rechner"><span class="card-icon">💶</span><h3>Kosten</h3><p>Kaufpreis, Verbrauch und laufende Kosten gemeinsam verstehen.</p><span class="card-link">Kosten verstehen →</span></a>
+</div>
+</section>
 
-  <p class="lead">
-    Der Kaufpreis ist nur ein Teil der Kosten. Entscheidend ist auch,
-    wie viel Strom ein Gerät verbraucht und wie lange du es nutzt.
-  </p>
+<section class="section journey">
+<div class="eyebrow" style="text-align:center">02 · Der Weg</div>
+<h2>So funktioniert DaheimSmart</h2>
+<p class="lead">Keine komplizierte Technik. Keine leeren Versprechen. Erst verstehen, dann entscheiden.</p>
+<div class="journey-grid">
+<div class="journey-step"><span class="journey-number">1</span><strong>Problem</strong><span>Was möchtest du verbessern?</span></div>
+<div class="journey-step"><span class="journey-number">2</span><strong>Ziel</strong><span>Was möchtest du erreichen?</span></div>
+<div class="journey-step"><span class="journey-number">3</span><strong>Lösung</strong><span>Welche Möglichkeiten gibt es?</span></div>
+<div class="journey-step"><span class="journey-number">4</span><strong>Messen & vergleichen</strong><span>Was sagen die Daten?</span></div>
+<div class="journey-step"><span class="journey-number">5</span><strong>Entscheiden</strong><span>Was passt zu deinem Zuhause?</span></div>
+</div>
+<p class="journey-principle">Erst das Problem. Dann die Lösung. Mit Daten vergleichen. Und erst am Ende das Produkt.</p>
+</section>
 
-  <div class="cards">
+<section class="section tool-section" id="werkzeuge">
+<div class="eyebrow" style="text-align:center">03 · Werkzeuge</div>
+<h2>Werkzeuge, die dir wirklich helfen</h2>
+<p class="lead">Von der ersten Frage bis zur konkreten Entscheidung: Rechne, vergleiche und verstehe deine eigenen Werte.</p>
+<div class="tool-grid">
+<article class="tool-card featured"><div class="tool-icon">⚡</div><h3>Stromkosten-Rechner</h3><p>Berechne, was ein Gerät bei deiner Nutzung tatsächlich an Stromkosten verursacht.</p><a class="btn" href="#rechner">Verbrauch berechnen →</a></article>
+<article class="tool-card"><div class="tool-icon">⚖️</div><h3>Gerätevergleich</h3><p>Vergleiche zwei Geräte anhand von Verbrauch, Kosten und Nutzung statt nur nach dem Preis.</p><a class="btn" href="#vergleich">Geräte vergleichen →</a></article>
+<article class="tool-card"><div class="tool-icon">🧠</div><h3>Entscheidungshilfe</h3><p>Eine spätere Funktion hilft dir, Lösungen anhand deiner persönlichen Anforderungen einzuordnen.</p><span class="card-link">Bald verfügbar</span></article>
+</div>
 
-    <article class="info-card">
-      <h3>🔎 1. Leistung prüfen</h3>
-      <p>
-        Schau auf die Leistung des Geräts in Watt. Je höher die Leistung,
-        desto mehr Strom kann das Gerät verbrauchen.
-      </p>
-    </article>
+<div class="calculator" id="rechner">
+<h3>⚡ Stromkosten berechnen</h3><p class="calc-intro">Alle Werte sind veränderbar. Kein Login und keine Speicherung.</p>
+<div class="form-grid"><div><label for="power">Leistung des Geräts (Watt)</label><input id="power" type="number" min="0" step="1" value="100"></div><div><label for="hours">Stunden pro Tag</label><input id="hours" type="number" min="0" step="0.1" value="4"></div><div><label for="days">Tage pro Monat</label><input id="days" type="number" min="0" step="1" value="30"></div><div><label for="price">Strompreis (€/kWh)</label><input id="price" type="number" min="0" step="0.01" value="0.35"></div></div>
+<div class="result"><div class="result-grid"><div>Verbrauch / Monat<strong id="kwh">12,00 kWh</strong></div><div>Kosten / Monat<strong id="monthly">4,20 €</strong></div><div>Kosten / Jahr<strong id="yearly">50,40 €</strong></div><div>Kosten / 5 Jahre<strong id="fiveyear">252,00 €</strong></div></div><div class="formula">Formel: Watt ÷ 1000 × Stunden pro Tag × Tage pro Monat = kWh/Monat.</div></div>
+<p class="notice">Hinweis: Rechnerische Näherung. Der tatsächliche Verbrauch kann je nach Gerät und Nutzung abweichen.</p>
+</div>
 
-    <article class="info-card">
-      <h3>⏱️ 2. Nutzung berücksichtigen</h3>
-      <p>
-        Ein Gerät mit geringer Leistung kann trotzdem Kosten verursachen,
-        wenn es viele Stunden am Tag oder dauerhaft läuft.
-      </p>
-    </article>
+<div class="calculator" id="vergleich">
+<h3>⚖️ Zwei Geräte vergleichen</h3><p class="calc-intro">Vergleiche zwei Geräte und sieh, welches bei deinem Strompreis langfristig günstiger ist.</p>
+<div class="compare-grid">
+<div><h4>Gerät A</h4><label for="deviceA">Name des Geräts</label><input id="deviceA" type="text" value="Gerät A"><label for="powerA">Leistung (Watt)</label><input id="powerA" type="number" min="0" step="1" value="100"><label for="hoursA">Stunden pro Tag</label><input id="hoursA" type="number" min="0" step="0.1" value="4"></div>
+<div><h4>Gerät B</h4><label for="deviceB">Name des Geräts</label><input id="deviceB" type="text" value="Gerät B"><label for="powerB">Leistung (Watt)</label><input id="powerB" type="number" min="0" step="1" value="60"><label for="hoursB">Stunden pro Tag</label><input id="hoursB" type="number" min="0" step="0.1" value="4"></div>
+</div>
+<div class="form-grid" style="margin-top:15px"><div><label for="compareDays">Tage pro Monat</label><input id="compareDays" type="number" min="0" step="1" value="30"></div><div><label for="comparePrice">Strompreis (€/kWh)</label><input id="comparePrice" type="number" min="0" step="0.01" value="0.35"></div></div>
+<div class="result"><div class="compare-table"><div class="compare-heading">Vergleich</div><div class="compare-heading" id="compareLabelA">Gerät A</div><div class="compare-heading" id="compareLabelB">Gerät B</div><div>Verbrauch / Monat</div><div id="compareKwhA">12,00 kWh</div><div id="compareKwhB">7,20 kWh</div><div>Kosten / Monat</div><div id="compareMonthlyA">4,20 €</div><div id="compareMonthlyB">2,52 €</div><div>Kosten / Jahr</div><div id="compareAnnualA">50,40 €</div><div id="compareAnnualB">30,24 €</div></div><div class="compare-highlight">Unterschied / Jahr<strong id="compareDiffYear">20,16 €</strong>Unterschied / 5 Jahre<strong id="compareDiffFive">100,80 €</strong><div class="compare-message" id="compareMessage">Gerät B ist bei diesen Annahmen günstiger.</div></div></div>
+<p class="notice">Hinweis: Der Vergleich basiert auf deinen Angaben. Tatsächliche Kosten können je nach Nutzung und Verbrauch abweichen.</p>
+</div>
+</section>
 
-    <article class="info-card">
-      <h3>💶 3. Gesamtkosten verstehen</h3>
-      <p>
-        Vergleiche nicht nur den Kaufpreis. Stromverbrauch, Nutzung und
-        laufende Kosten zeigen dir, was ein Gerät langfristig kostet.
-      </p>
-    </article>
+<section class="section">
+<div class="eyebrow" style="text-align:center">04 · Vertrauen</div>
+<h2>Messen statt raten. Vergleichen statt glauben.</h2>
+<p class="lead">DaheimSmart zeigt dir, woher Informationen kommen, wann sie geprüft wurden und welche Grenzen eine Angabe hat.</p>
+<div class="trust-grid">
+<article class="trust-card"><span class="card-icon">📊</span><h3>Nachvollziehbare Daten</h3><p>Zahlen und technische Angaben werden verständlich erklärt und, wo möglich, mit deinen eigenen Werten verbunden.</p></article>
+<article class="trust-card"><span class="card-icon">📚</span><h3>Transparente Quellen</h3><p>Produktinformationen werden mit den jeweiligen Quellen nachvollziehbar gemacht.</p></article>
+<article class="trust-card"><span class="card-icon">⚖️</span><h3>Ehrliche Vergleiche</h3><p>Vorteile und Einschränkungen gehören gleichermaßen dazu.</p></article>
+</div>
+<div class="trust-evidence"><strong>Woher kommen die Angaben?</strong><br>Herstellerangaben, technische Daten und nachvollziehbare Berechnungen bilden die Grundlage unserer Vergleiche.<br><span>Quelle · Prüfdatum · Vorteile · Einschränkungen</span></div>
+</section>
 
-  </div>
-
-  <div class="proof-strip">
-    💡 Unser Tipp: Rechne zuerst mit deinen eigenen Werten.
-    Dann kannst du Geräte sinnvoll miteinander vergleichen.
-  </div>
+<section class="section">
+<div class="comparison-wrap">
+<div class="eyebrow" style="text-align:center">05 · Echtes Beispiel</div>
+<h3>Was unterscheidet zwei Lösungen?</h3>
+<p class="lead">Zwei Geräte können dasselbe Problem lösen, aber unterschiedlich gut zu deinem Zuhause passen.</p>
+<div class="comparison-table">
+<div class="comparison-head">Kriterium</div><div class="comparison-head">Tapo P110M</div><div class="comparison-head">FRITZ!Smart Energy 200</div>
+<div>Problem</div><div>Energieverbrauch messen und Geräte schalten</div><div>Energieverbrauch messen und Geräte schalten</div>
+<div>Technologie</div><div>WLAN + Matter</div><div>DECT ULE</div>
+<div>Energieüberwachung</div><div class="comparison-check">✓ Ja</div><div class="comparison-check">✓ Ja</div>
+<div>Kompatibilität</div><div>Matter, Apple Home, Alexa, Google Home</div><div>FRITZ!Box / FRITZ!Smart Home</div>
+<div>Hub / Basis nötig</div><div>Bei Drittanbieter-Matter-Systemen ggf. Hub</div><div>Kompatible FRITZ!Box mit DECT-Basis erforderlich</div>
+<div>Automatisierung</div><div>Zeitpläne, Auto-Off und weitere Automationen</div><div>Zeitpläne, Countdown, Astro und weitere Automationen</div>
+<div>Zusätzliche Messwerte</div><div>Energieverbrauch und Kosten</div><div>Leistung, Spannung, Strom, Energie, Kosten und CO₂</div>
+<div>Installation</div><div>🟢 Einfach</div><div>🟢 Einfach, wenn FRITZ!Box vorhanden</div>
+<div>Maximale Last</div><div>16 A / 3680 W*</div><div>10 A / 2300 W</div>
+<div>Eigener Verbrauch</div><div>Nicht in den geprüften Herstellerangaben gefunden</div><div>ca. 1,1 W max.; ca. 0,5 W Stand-by</div>
+<div>Datensicherheit / Updates</div><div>WPA3, Sicherheitsfunktionen und Firmware-Updates</div><div>Automatische Updates und langfristige Produktpflege</div>
+<div>Preis</div><div>Aktuellen Preis prüfen</div><div>29,99 € Herstellerpreis</div>
+<div>Stärke</div><div>Flexible Integration über Matter</div><div>Sehr tiefe Integration ins FRITZ!-System</div>
+<div>Einschränkung</div><div>Drittanbieter-Matter-System kann einen Hub benötigen</div><div>Ohne kompatible FRITZ!Box nicht sinnvoll nutzbar</div>
+<div>Passt besonders zu</div><div>Haushalten mit unterschiedlichen Smart-Home-Plattformen</div><div>Haushalten mit FRITZ!Box</div>
+</div>
+<div class="comparison-note"><strong>🏠 Welche Lösung passt zu dir?</strong><span>Tapo P110M kann besonders interessant sein, wenn du Matter und verschiedene Smart-Home-Plattformen nutzen möchtest. Der FRITZ!Smart Energy 200 passt besonders gut, wenn dein Zuhause bereits auf FRITZ!Box und FRITZ!Smart Home basiert.</span></div>
+<div class="comparison-note" style="margin-top:10px;font-size:.82rem">* TP-Link nennt 16 A / 3680 W für allgemeine bzw. ohmsche Lasten. Für bestimmte Motorlasten gelten Einschränkungen. Technische Angaben sollten vor dem Kauf mit den aktuellen Herstellerinformationen geprüft werden.</div>
+<div class="comparison-sources"><strong>📚 Quellen der Produktangaben</strong><p>Die technischen Angaben dieser Vergleichstabelle basieren auf den offiziellen Produktinformationen der Hersteller.</p><ul><li><strong>Tapo P110M:</strong> offizielle Produktseite von TP-Link Deutschland</li><li><strong>FRITZ!Smart Energy 200:</strong> offizielle Produktseite von FRITZ!</li></ul><p class="source-date">Stand der geprüften Angaben: 28.09.2026</p></div>
+</div>
 </section>
 
 <section class="section" id="ratgeber">
-<div class="eyebrow" style="text-align:center">Ratgeber</div>
-<h2>Wissen, das dir wirklich hilft.</h2>
-<p class="lead">Einfache Antworten auf wichtige Fragen rund um Smart Home – praktisch, ehrlich und ohne Technik-Hype.</p>
-
-<div class="cards">
-
-
-<article class="info-card">
-<h3>⚡ Wie viel Strom verbraucht ein Smart-Home-Gerät wirklich?</h3>
-
-<p>
-Der Stromverbrauch hängt vor allem von der Leistung des Geräts und seiner Nutzung ab.
-Ein Gerät mit 100 Watt, das 4 Stunden täglich läuft, verbraucht beispielsweise
-etwa 12 kWh pro Monat.
-</p>
-
-<div class="card-result">
-<strong>Beispiel: 100 W × 4 h/Tag</strong>
-<span>≈ 12 kWh / Monat · bei 30 Tagen</span>
+<div class="eyebrow" style="text-align:center">06 · Ratgeber</div>
+<h2>Ratgeber – einfach erklärt</h2>
+<p class="lead">Verstehe Technik, Energie und Smart Home ohne komplizierte Fachbegriffe.</p>
+<div class="cards ratgeber-grid">
+<article class="info-card"><h3>⚡ Stromverbrauch verstehen</h3><p>Wie viel Strom verbraucht ein Smart-Home-Gerät wirklich?</p><div class="card-result"><strong>100 W × 4 h/Tag</strong><span>≈ 12 kWh / Monat bei 30 Tagen</span></div><a class="btn" href="#rechner">Eigenen Verbrauch berechnen</a></article>
+<article class="info-card"><h3>🛡️ Sicherheit</h3><p>Welche Smart-Home-Geräte können wichtige Ereignisse erkennen?</p><div class="card-result"><strong>🚪 → 📱 → 🔔</strong><span>Sensor erkennt ein Ereignis und informiert dich.</span></div><p>Datenschutz, sichere Passwörter und Updates gehören zur Lösung dazu.</p></article>
+<article class="info-card"><h3>🏠 Automationen</h3><p>Welche Abläufe können den Alltag wirklich einfacher machen?</p><div class="card-result"><strong>🚪 → 💡 → 🌡️</strong><span>Eine Situation kann mehrere Aktionen auslösen.</span></div><p>Starte mit einer Automation, die du wirklich jeden Tag nutzt.</p></article>
+<article class="info-card"><h3>💶 Gesamtkosten</h3><p>Was kostet ein Smart Home wirklich?</p><div class="card-result"><strong>💶 + ⚡ + 🔧</strong><span>Kaufpreis + Verbrauch + Zubehör.</span></div><p>Der günstigste Kaufpreis ist nicht automatisch die günstigste Lösung.</p></article>
+<article class="info-card"><h3>📱 Vor dem Kauf</h3><p>Welche Kriterien solltest du vor einer Entscheidung prüfen?</p><div class="card-result"><strong>🔌 🔐 💶 🛠️</strong><span>Kompatibilität · Sicherheit · Kosten · Installation</span></div><p>Kaufe das Gerät, das dein konkretes Problem zuverlässig löst.</p></article>
+<article class="info-card"><h3>⚖️ Vergleichen</h3><p>Warum zwei ähnliche Geräte trotzdem unterschiedlich gut passen können.</p><div class="card-result"><strong>Daten statt Bauchgefühl</strong><span>Funktionen, Kosten und Einschränkungen gemeinsam betrachten.</span></div><a class="btn" href="#vergleich">Geräte vergleichen</a></article>
 </div>
+</section>
 
-<p>
-Bei einem Strompreis von 0,35 € pro kWh wären das ungefähr
-4,20 € im Monat beziehungsweise 50,40 € im Jahr.
-</p>
+<section class="cta">
+<div class="eyebrow">07 · Dein nächster Schritt</div>
+<h2>Bereit, dein Zuhause besser zu verstehen?</h2>
+<p>Starte mit deinem Problem, nutze unsere Werkzeuge und finde heraus, welche Lösung zu deinem Zuhause passt.</p>
+<a class="btn" href="#loesungen">Mein Problem finden →</a>
+</section>
+</main>
+<footer><strong>DaheimSmart</strong><br>Smarte Technik. Einfach erklärt.<br><br>Messen statt raten.<br><br><a href="impressum.html">Impressum</a><br><a href="datenschutz.html">Datenschutz</a></footer>
 
-<a class="btn" href="#rechner">Eigenen Verbrauch berechnen</a>
-
-<p style="margin-top:15px">
-<strong>Was bedeutet das für dich?</strong><br>
-Mit deinen eigenen Werten kannst du besser erkennen,
-welche Geräte langfristig wie viel kosten.
-</p>
-</article>
-
-<article class="info-card">
-<h3>🔐 Welche Smart-Home-Geräte erhöhen die Sicherheit?</h3>
-
-<p>
-Smart-Home-Sicherheit beginnt nicht mit möglichst vielen Geräten,
-sondern mit der richtigen Information zur richtigen Zeit.
-</p>
-
-<div class="card-result">
-<strong>Beispiel: Tür wird geöffnet</strong>
-<span>🚪 → 📱 Benachrichtigung → 🔔 reagieren</span>
-</div>
-
-<p>
-Tür- und Fenstersensoren können erkennen, ob etwas geöffnet wird.
-Bewegungsmelder können Bewegungen erfassen und Benachrichtigungen
-an dein Smartphone senden.
-</p>
-
-<p>
-<strong>Wichtig:</strong> Datenschutz, sichere Passwörter und eine
-zuverlässige Installation gehören genauso zur Sicherheit wie das Gerät selbst.
-</p>
-
-<p style="margin-top:15px">
-<strong>Was bedeutet das für dich?</strong><br>
-Du musst nicht dein ganzes Zuhause vernetzen. Entscheidend ist,
-dass du wichtige Ereignisse erkennst und informiert wirst.
-</p>
-</article>
-
-<article class="info-card">
-<h3>🏠 Welche Automationen sind im Alltag wirklich sinnvoll?</h3>
-
-<p>
-Eine gute Automation soll nicht komplizierter machen,
-sondern dir eine wiederkehrende Aufgabe abnehmen.
-</p>
-
-<div class="card-result">
-<strong>Beispiel: Nach Hause kommen</strong>
-<span>🚪 → 💡 Licht an → 🌡️ angenehme Temperatur</span>
-</div>
-
-<p>
-Zum Beispiel kann das Licht automatisch eingeschaltet werden,
-wenn du nach Hause kommst. Auch Heizung, Rollläden oder andere
-Geräte können abhängig von bestimmten Situationen gesteuert werden.
-</p>
-
-<p>
-<strong>Wichtig:</strong> Nicht jede Automation ist sinnvoll.
-Sie sollte zuverlässig funktionieren und dir im Alltag tatsächlich
-Zeit oder Aufwand sparen.
-</p>
-
-<p style="margin-top:15px">
-<strong>Was bedeutet das für dich?</strong><br>
-Starte mit einem einzigen Ablauf, den du jeden Tag nutzt.
-Wenn er zuverlässig funktioniert, kannst du weitere Automationen hinzufügen.
-</p>
-</article>
-
-<article class="info-card">
-<h3>💶 Was kostet ein Smart Home wirklich?</h3>
-
-<p>
-Die Kosten für ein Smart Home bestehen nicht nur aus dem Kaufpreis.
-Auch Stromverbrauch, Zubehör, Installation und laufende Kosten können
-eine Rolle spielen.
-</p>
-
-<div class="card-result">
-<strong>Beispiel: Gesamtkosten betrachten</strong>
-<span>💶 Kaufpreis + ⚡ Verbrauch + 🔧 Zubehör + 🛠️ Installation</span>
-</div>
-
-<p>
-Ein günstiges Gerät kann langfristig mehr kosten, wenn es viel Strom
-verbraucht oder zusätzliches Zubehör benötigt. Umgekehrt kann ein
-teureres Gerät sinnvoll sein, wenn es zuverlässig funktioniert und
-weniger laufende Kosten verursacht.
-</p>
-
-<p>
-<strong>Wichtig:</strong> Es gibt nicht für jedes Zuhause die gleiche
-Lösung. Entscheidend ist, welche Kosten tatsächlich entstehen und
-welchen praktischen Nutzen du dafür bekommst.
-</p>
-
-<p style="margin-top:15px">
-<strong>Was bedeutet das für dich?</strong><br>
-Vergleiche nicht nur den Preis im Shop. Betrachte die Gesamtkosten
-und den Nutzen über einen längeren Zeitraum.
-</p>
-</article>
-
-<article class="info-card">
-<h3>📱 Was sollte man vor dem Kauf eines Smart-Home-Geräts prüfen?</h3>
-
-<p>
-Bevor du ein Smart-Home-Gerät kaufst, solltest du nicht nur auf den Preis
-oder die technischen Funktionen schauen. Wichtig ist, dass das Gerät
-zu deinem Zuhause und zu deinen anderen Geräten passt.
-</p>
-
-<div class="card-result">
-<strong>Vor dem Kauf prüfen</strong>
-<span>🔗 Kompatibilität · 🔐 Sicherheit · 🛡️ Datenschutz · 💶 Gesamtkosten</span>
-</div>
-
-<p>
-<strong>Kompatibilität:</strong> Prüfe, ob das Gerät mit deinem Smartphone,
-deinem Smart-Home-System und bereits vorhandenen Geräten funktioniert.
-Nicht jedes Gerät funktioniert mit jeder Plattform.
-</p>
-
-<p>
-<strong>Sicherheit und Datenschutz:</strong> Achte auf sichere Passwörter,
-regelmäßige Updates und darauf, welche Daten das Gerät sammelt und
-wo diese verarbeitet werden.
-</p>
-
-<p>
-<strong>Funktionen und Kosten:</strong> Überlege, welche Funktion du
-wirklich brauchst. Berücksichtige neben dem Kaufpreis auch Zubehör,
-Stromverbrauch und mögliche Installationskosten.
-</p>
-
-<p style="margin-top:15px">
-<strong>Was bedeutet das für dich?</strong><br>
-Kaufe nicht das Gerät mit den meisten Funktionen, sondern das Gerät,
-das dein konkretes Problem zuverlässig löst und zu deinem Zuhause passt.
-</p>
-</article>
-
-</div>
-</section><section class="section"><div class="eyebrow" style="text-align:center">Einfach erklärt</div><h2>Smart Home ohne Technik-Frust</h2><p class="lead">Wir konzentrieren uns auf Lösungen mit nachvollziehbarem Nutzen.</p><div class="cards"><article class="info-card"><h3>🔎 Messen</h3><p>Verbrauch und Nutzung zuerst verstehen, statt blind neue Technik zu kaufen.</p></article><article class="info-card"><h3>⚖️ Vergleichen</h3><p>Preis, Funktionen, Datenschutz, Installation und laufende Kosten gemeinsam betrachten.</p></article><article class="info-card"><h3>✅ Entscheiden</h3><p>Nur kaufen, wenn der praktische Nutzen für dein Zuhause erkennbar ist.</p></article></div></section>
-<footer>
-<strong>DaheimSmart</strong><br>
-Smarte Technik. Einfach erklärt.<br><br>
-Messen statt raten.<br><br>
-<a href="impressum.html" style="color:#8fd19e">Impressum</a><br>
-<a href="datenschutz.html" style="color:#8fd19e">Datenschutz</a>
-</footer>
 <script>
-const powerInput=document.getElementById('power');
-const hoursInput=document.getElementById('hours');
-const daysInput=document.getElementById('days');
-const priceInput=document.getElementById('price');
-const kwhOutput=document.getElementById('kwh');
-const monthlyOutput=document.getElementById('monthly');
-const yearlyOutput=document.getElementById('yearly');
-const fiveYearOutput=document.getElementById('fiveyear');
-function calculate(){
-const p=parseFloat(powerInput.value)||0;
-const h=parseFloat(hoursInput.value)||0;
-const d=parseFloat(daysInput.value)||0;
-const pr=parseFloat(priceInput.value)||0;
-const k=p/1000*h*d;
-const m=k*pr;
-const y=m*12;
-const fiveYear=m*60;
-const f=new Intl.NumberFormat('de-DE',{minimumFractionDigits:2,maximumFractionDigits:2});
-kwhOutput.textContent=f.format(k)+' kWh';
-monthlyOutput.textContent=f.format(m)+' €';
-yearlyOutput.textContent=f.format(y)+' €';
-fiveYearOutput.textContent=f.format(fiveYear)+' €';
-}
-
-
+const powerInput=document.getElementById('power'),hoursInput=document.getElementById('hours'),daysInput=document.getElementById('days'),priceInput=document.getElementById('price');
+const kwhOutput=document.getElementById('kwh'),monthlyOutput=document.getElementById('monthly'),yearlyOutput=document.getElementById('yearly'),fiveYearOutput=document.getElementById('fiveyear');
+function calculate(){const p=parseFloat(powerInput.value)||0,h=parseFloat(hoursInput.value)||0,d=parseFloat(daysInput.value)||0,pr=parseFloat(priceInput.value)||0,k=p/1000*h*d,m=k*pr,y=m*12,fiveYear=m*60,f=new Intl.NumberFormat('de-DE',{minimumFractionDigits:2,maximumFractionDigits:2});kwhOutput.textContent=f.format(k)+' kWh';monthlyOutput.textContent=f.format(m)+' €';yearlyOutput.textContent=f.format(y)+' €';fiveYearOutput.textContent=f.format(fiveYear)+' €'}
 [powerInput,hoursInput,daysInput,priceInput].forEach(i=>i.addEventListener('input',calculate));calculate();
-const deviceAInput=document.getElementById('deviceA');
-const deviceBInput=document.getElementById('deviceB');
-const powerAInput=document.getElementById('powerA');
-const powerBInput=document.getElementById('powerB');
-const hoursAInput=document.getElementById('hoursA');
-const hoursBInput=document.getElementById('hoursB');
-const compareDaysInput=document.getElementById('compareDays');
-const comparePriceInput=document.getElementById('comparePrice');
 
-const compareLabelA=document.getElementById('compareLabelA');
-const compareLabelB=document.getElementById('compareLabelB');
-const compareKwhA=document.getElementById('compareKwhA');
-const compareKwhB=document.getElementById('compareKwhB');
-const compareMonthlyA=document.getElementById('compareMonthlyA');
-const compareMonthlyB=document.getElementById('compareMonthlyB');
-const compareAnnualA=document.getElementById('compareAnnualA');
-const compareAnnualB=document.getElementById('compareAnnualB');
-const compareDiffYear=document.getElementById('compareDiffYear');
-const compareDiffFive=document.getElementById('compareDiffFive');
-const compareMessage=document.getElementById('compareMessage');
-
-function calculateComparison(){
-  const nameA=deviceAInput.value.trim()||'Gerät A';
-  const nameB=deviceBInput.value.trim()||'Gerät B';
-
-  const pA=parseFloat(powerAInput.value)||0;
-  const pB=parseFloat(powerBInput.value)||0;
-  const hA=parseFloat(hoursAInput.value)||0;
-  const hB=parseFloat(hoursBInput.value)||0;
-  const d=parseFloat(compareDaysInput.value)||0;
-  const pr=parseFloat(comparePriceInput.value)||0;
-
-  const kA=pA/1000*hA*d;
-  const kB=pB/1000*hB*d;
-
-  const mA=kA*pr;
-  const mB=kB*pr;
-
-  const yA=mA*12;
-  const yB=mB*12;
-
-  const diffYear=Math.abs(yA-yB);
-  const diffFive=diffYear*5;
-
-  const f=new Intl.NumberFormat('de-DE',{
-    minimumFractionDigits:2,
-    maximumFractionDigits:2
-  });
-
-  compareLabelA.textContent=nameA;
-  compareLabelB.textContent=nameB;
-
-  compareKwhA.textContent=f.format(kA)+' kWh';
-  compareKwhB.textContent=f.format(kB)+' kWh';
-
-  compareMonthlyA.textContent=f.format(mA)+' €';
-  compareMonthlyB.textContent=f.format(mB)+' €';
-
-  compareAnnualA.textContent=f.format(yA)+' €';
-  compareAnnualB.textContent=f.format(yB)+' €';
-
-  compareDiffYear.textContent=f.format(diffYear)+' €';
-  compareDiffFive.textContent=f.format(diffFive)+' €';
-
-  if(yA<yB){
-    compareMessage.textContent=
-      nameA+' ist bei diesen Annahmen '+f.format(diffYear)+' € pro Jahr günstiger.';
-  }else if(yB<yA){
-    compareMessage.textContent=
-      nameB+' ist bei diesen Annahmen '+f.format(diffYear)+' € pro Jahr günstiger.';
-  }else{
-    compareMessage.textContent=
-      'Beide Geräte kosten bei diesen Annahmen gleich viel.';
-  }
-}
-
-
-  [
-  deviceAInput,
-  deviceBInput,
-  powerAInput,
-  powerBInput,
-  hoursAInput,
-  hoursBInput,
-  compareDaysInput,
-  comparePriceInput
-].forEach(function(i){
-  if(i){
-    i.addEventListener('input',calculateComparison);
-  }
-});
-
-calculateComparison();
+const deviceAInput=document.getElementById('deviceA'),deviceBInput=document.getElementById('deviceB'),powerAInput=document.getElementById('powerA'),powerBInput=document.getElementById('powerB'),hoursAInput=document.getElementById('hoursA'),hoursBInput=document.getElementById('hoursB'),compareDaysInput=document.getElementById('compareDays'),comparePriceInput=document.getElementById('comparePrice');
+const compareLabelA=document.getElementById('compareLabelA'),compareLabelB=document.getElementById('compareLabelB'),compareKwhA=document.getElementById('compareKwhA'),compareKwhB=document.getElementById('compareKwhB'),compareMonthlyA=document.getElementById('compareMonthlyA'),compareMonthlyB=document.getElementById('compareMonthlyB'),compareAnnualA=document.getElementById('compareAnnualA'),compareAnnualB=document.getElementById('compareAnnualB'),compareDiffYear=document.getElementById('compareDiffYear'),compareDiffFive=document.getElementById('compareDiffFive'),compareMessage=document.getElementById('compareMessage');
+function calculateComparison(){const nameA=deviceAInput.value.trim()||'Gerät A',nameB=deviceBInput.value.trim()||'Gerät B',pA=parseFloat(powerAInput.value)||0,pB=parseFloat(powerBInput.value)||0,hA=parseFloat(hoursAInput.value)||0,hB=parseFloat(hoursBInput.value)||0,d=parseFloat(compareDaysInput.value)||0,pr=parseFloat(comparePriceInput.value)||0,kA=pA/1000*hA*d,kB=pB/1000*hB*d,mA=kA*pr,mB=kB*pr,yA=mA*12,yB=mB*12,diffYear=Math.abs(yA-yB),diffFive=diffYear*5,f=new Intl.NumberFormat('de-DE',{minimumFractionDigits:2,maximumFractionDigits:2});compareLabelA.textContent=nameA;compareLabelB.textContent=nameB;compareKwhA.textContent=f.format(kA)+' kWh';compareKwhB.textContent=f.format(kB)+' kWh';compareMonthlyA.textContent=f.format(mA)+' €';compareMonthlyB.textContent=f.format(mB)+' €';compareAnnualA.textContent=f.format(yA)+' €';compareAnnualB.textContent=f.format(yB)+' €';compareDiffYear.textContent=f.format(diffYear)+' €';compareDiffFive.textContent=f.format(diffFive)+' €';if(yA<yB){compareMessage.textContent=nameA+' ist bei diesen Annahmen '+f.format(diffYear)+' € pro Jahr günstiger.'}else if(yB<yA){compareMessage.textContent=nameB+' ist bei diesen Annahmen '+f.format(diffYear)+' € pro Jahr günstiger.'}else{compareMessage.textContent='Beide Geräte kosten bei diesen Annahmen gleich viel.'}}
+[deviceAInput,deviceBInput,powerAInput,powerBInput,hoursAInput,hoursBInput,compareDaysInput,comparePriceInput].forEach(i=>i.addEventListener('input',calculateComparison));calculateComparison();
 </script>
-</body></html>
+</body>
+</html>
