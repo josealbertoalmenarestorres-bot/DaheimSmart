@@ -23,13 +23,14 @@ Erst wird das konkrete Problem verstanden. Danach wird erklärt, welche Lösung 
 - 🏠 **Komfort:** Automationen und Smart-Home-Lösungen für den Alltag
 - 💶 **Kosten:** Anschaffung, Verbrauch und Nutzen gemeinsam betrachten
 - 🔎 **Vergleiche:** technische Unterschiede anhand nachvollziehbarer Kriterien
-- 📚 **Ratgeber:** Smart-Home-Technik einfach und praxisnah erklärt
+- 📚 **Ratgeber:** zentral nach Themen organisiert
+- 🧭 **Werkzeuge:** zentraler Einstieg zu Rechnern und Energievergleich
 - 🧮 **Stromkosten-Rechner:** interaktive Berechnung direkt im Browser
 - 📊 **Produktvergleich:** interaktiver Vergleich verschiedener Geräte
 
 ## Aktueller Projektstand
 
-DaheimSmart befindet sich aktuell in der Phase eines **funktionalen statischen Web-Prototyps**.
+DaheimSmart befindet sich aktuell in der Phase eines **funktionalen statischen Web-Prototyps mit zentraler Inhaltsarchitektur (2.4)**.
 
 Die technische Basis steht und die wichtigsten Inhalte und Werkzeuge sind bereits integriert.
 
@@ -57,10 +58,20 @@ DaheimSmart ist derzeit eine schlanke statische Website auf Basis von HTML, CSS 
 ```text
 DaheimSmart/
 ├── index.html
+├── ratgeber.html
+├── werkzeuge.html
+├── vergleiche.html
+├── hub.css
+├── ratgeber-stromverbrauch.html
+├── ratgeber-matter.html
+├── ratgeber-intelligente-steckdose.html
+├── ratgeber.css
 ├── impressum.html
 ├── datenschutz.html
 ├── daheimsmart-house-hero.png
 ├── README.md
+├── robots.txt
+├── sitemap.xml
 └── .github/
     └── workflows/
         └── static.yml
