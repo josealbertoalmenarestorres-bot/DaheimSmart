@@ -30,7 +30,7 @@ Erst wird das konkrete Problem verstanden. Danach wird erklärt, welche Lösung 
 
 ## Aktueller Projektstand
 
-DaheimSmart befindet sich aktuell in der Phase eines **funktionalen statischen Web-Prototyps mit zentraler Inhaltsarchitektur (2.4)**.
+DaheimSmart befindet sich aktuell in der Phase eines **funktionalen statischen Web-Prototyps mit zentraler Inhaltsarchitektur (2.8)**.
 
 Die technische Basis steht und die wichtigsten Inhalte und Werkzeuge sind bereits integriert.
 
