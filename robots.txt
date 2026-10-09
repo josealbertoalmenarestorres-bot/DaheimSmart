@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://josealbertoalmenarestorres-bot.github.io/sitemap.xml
+Sitemap: https://josealbertoalmenarestorres-bot.github.io/DaheimSmart/sitemap.xml
